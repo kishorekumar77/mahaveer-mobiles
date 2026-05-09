@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mahaveer Mobiles – Best Deals on Smartphones & Accessories</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css"/>
+<!-- EmailJS SDK for real OTP delivery -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+:root{
+  --dark:#0f0f1a;
+  --dark2:#1a1a2e;
+  --dark3:#16213e;
+  --gold:#f7c948;
+  --gold2:#e6b800;
+  --white:#fff;
+  --gray:#f4f6fb;
+  --text:#1a1a2e;
+  --muted:#888;
+  --border:#e8e8e8;
+  --green:#22c55e;
+  --red:#ef4444;
+  --blue:#3b82f6;
+}
+body{background:var(--gray);color:var(--text);overflow-x:hidden;overflow-y:auto;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;font-family:inherit;}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:#f1f1f1;}
+::-webkit-scrollbar-thumb{background:#ccc;border-radius:3px;}
+
+/* ===== TOP BAR ===== */
+.topbar{background:var(--dark);padding:6px 20px;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#aaa;}
+.topbar span{display:flex;align-items:center;gap:6px;}
+.topbar i{color:var(--gold);font-size:13px;}
+.topbar-right{display:flex;gap:16px;}
+
+/* ===== NAV ===== */
+nav{background:var(--dark2);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:200;box-shadow:0 2px 20px #0005;}
+.logo{display:flex;align-items:center;gap:12px;}
+.logo-icon{width:42px;height:42px;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;}
+.logo-icon i{font-size:22px;color:var(--dark2);}
+.logo-text{color:#fff;font-size:20px;font-weight:800;letter-spacing:.5px;}
+.logo-text span{color:var(--gold);}
+.logo-sub{font-size:10px;color:#aaa;font-weight:400;display:block;letter-spacing:1px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-links a{color:#ccc;font-size:13px;font-weight:500;padding:8px 14px;border-radius:8px;transition:all .2s;}
+.nav-links a:hover,.nav-links a.active{background:#ffffff10;color:var(--gold);}
+.nav-actions{display:flex;align-items:center;gap:10px;}
+.nav-search{display:flex;align-items:center;background:#ffffff10;border-radius:8px;padding:7px 12px;gap:8px;}
+.nav-search input{background:none;border:none;outline:none;color:#fff;font-size:13px;width:160px;}
+.nav-search input::placeholder{color:#888;}
+.nav-search i{color:#888;font-size:15px;}
+.cart-btn{position:relative;background:#ffffff10;border:none;color:#fff;width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .2s;}
+.cart-btn:hover{background:#ffffff20;}
+.cart-count{position:absolute;top:-4px;right:-4px;background:var(--red);color:#fff;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+
+/* ===== HERO ===== */
+.hero{background:linear-gradient(135deg,var(--dark) 0%,var(--dark3) 50%,#0d3b6e 100%);padding:60px 24px 50px;position:relative;overflow:hidden;}
+.hero-bg-circle{position:absolute;border-radius:50%;background:var(--gold);opacity:.05;}
+.hero-bg-circle.c1{width:400px;height:400px;top:-100px;right:-100px;}
+.hero-bg-circle.c2{width:200px;height:200px;bottom:-50px;left:-50px;}
+.hero-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:40px;flex-wrap:wrap;}
+.hero-content{flex:1;min-width:280px;}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:var(--gold)20;border:1px solid var(--gold)40;color:var(--gold);font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:1px;text-transform:uppercase;}
+.hero h1{font-size:38px;font-weight:900;color:#fff;margin-bottom:14px;line-height:1.15;}
+.hero h1 span{color:var(--gold);}
+.hero p{color:#aaa;font-size:15px;max-width:480px;margin-bottom:28px;line-height:1.7;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-gold{background:var(--gold);color:var(--dark2);border:none;padding:13px 28px;border-radius:10px;font-size:14px;font-weight:800;display:flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid #ffffff30;padding:13px 28px;border-radius:10px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+.hero-stats{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap;}
+.stat{text-align:center;}
+.stat .num{font-size:26px;font-weight:900;color:var(--gold);}
+.stat .lbl{font-size:11px;color:#aaa;margin-top:2px;text-transform:uppercase;letter-spacing:.5px;}
+.hero-visual{flex:0 0 320px;display:flex;flex-direction:column;gap:12px;}
+.hero-card{background:#ffffff08;border:1px solid #ffffff15;border-radius:14px;padding:16px;display:flex;align-items:center;gap:14px;backdrop-filter:blur(10px);}
+.hero-card-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.hero-card-icon.gold{background:var(--gold)20;color:var(--gold);}
+.hero-card-icon.blue{background:#3b82f620;color:#3b82f6;}
+.hero-card-icon.green{background:#22c55e20;color:#22c55e;}
+.hero-card-info .title{font-size:14px;font-weight:700;color:#fff;}
+.hero-card-info .sub{font-size:12px;color:#aaa;margin-top:2px;}
+.hero-card-price{margin-left:auto;text-align:right;}
+.hero-card-price .price{font-size:16px;font-weight:800;color:var(--gold);}
+.hero-card-price .old{font-size:11px;color:#666;text-decoration:line-through;}
+
+/* ===== MARQUEE ===== */
+.marquee-wrap{background:var(--gold);padding:10px 0;overflow:hidden;}
+.marquee-track{display:flex;gap:40px;animation:marquee 20s linear infinite;white-space:nowrap;}
+.marquee-track span{font-size:13px;font-weight:700;color:var(--dark2);display:flex;align-items:center;gap:8px;}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ===== SECTION ===== */
+.section{padding:40px 24px;max-width:1200px;margin:0 auto;}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px;}
+.section-title{font-size:22px;font-weight:800;color:var(--text);}
+.section-title span{color:var(--gold);}
+.section-sub{font-size:13px;color:var(--muted);margin-top:4px;}
+.see-all{font-size:13px;font-weight:600;color:var(--dark2);display:flex;align-items:center;gap:4px;border:1.5px solid var(--border);padding:7px 14px;border-radius:8px;transition:all .2s;}
+.see-all:hover{background:var(--dark2);color:var(--gold);border-color:var(--dark2);}
+
+/* ===== BRAND PILLS ===== */
+.brands{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+.brand-pill{display:flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--border);border-radius:30px;padding:9px 18px;font-size:13px;font-weight:600;cursor:pointer;color:var(--text);transition:all .2s;box-shadow:0 1px 4px #0001;}
+.brand-pill.active,.brand-pill:hover{background:var(--dark2);color:var(--gold);border-color:var(--dark2);box-shadow:0 4px 12px #1a1a2e30;}
+.brand-pill i{font-size:16px;}
+
+/* ===== POORVIKA-STYLE PRODUCT CARDS ===== */
+/* Horizontal scroll row */
+.prow-wrap{position:relative;}
+.prow{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;}
+.prow::-webkit-scrollbar{height:4px;}
+.prow::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px;}
+.prow-arrow{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;background:#fff;border:1.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;box-shadow:0 2px 8px #0002;transition:all .2s;font-size:16px;color:var(--dark2);}
+.prow-arrow:hover{background:var(--dark2);color:#fff;border-color:var(--dark2);}
+.prow-arrow.left{left:-16px;}
+.prow-arrow.right{right:-16px;}
+@media(max-width:600px){.prow-arrow{display:none;}}
+
+/* Card */
+.pcard{background:#fff;border-radius:14px;padding:0;border:1.5px solid #efefef;cursor:pointer;transition:all .22s;position:relative;box-shadow:0 1px 4px #0001;flex:0 0 175px;width:175px;overflow:hidden;display:flex;flex-direction:column;}
+.pcard:hover{transform:translateY(-3px);border-color:#f7c948;box-shadow:0 6px 20px #0002;}
+/* Save badge — top left like Poorvika */
+.psave-badge{position:absolute;top:0;left:0;background:#dc2626;color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:0 0 8px 0;z-index:2;letter-spacing:.3px;}
+/* Wish */
+.pwish{position:absolute;top:8px;right:8px;background:#fff;border:1px solid #eee;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;transition:all .2s;z-index:2;box-shadow:0 1px 4px #0001;}
+.pwish:hover{background:#fff0f0;}
+.pwish i{font-size:13px;color:#ccc;transition:color .2s;}
+.pwish.liked i{color:#ef4444;}
+/* Image area */
+.pimg{width:100%;height:150px;display:flex;align-items:center;justify-content:center;background:#f8f9fc;overflow:hidden;padding:10px;}
+.pimg img{height:130px;width:auto;max-width:100%;object-fit:contain;transition:transform .3s ease;display:block;}
+.pcard:hover .pimg img{transform:scale(1.06);}
+.pimg-fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;}
+/* Card body */
+.pcard-body{padding:10px 12px 12px;display:flex;flex-direction:column;flex:1;}
+.pbrand{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px;}
+.pname{font-size:13px;font-weight:700;color:var(--text);line-height:1.35;margin-bottom:6px;min-height:36px;}
+/* Price — Poorvika style: sale price big, MRP strikethrough, % off green */
+.pprice{margin-bottom:4px;}
+.pprice .sale{font-size:16px;font-weight:900;color:var(--dark2);display:block;}
+.pprice .price-row2{display:flex;align-items:center;gap:6px;margin-top:2px;flex-wrap:wrap;}
+.pprice .original{font-size:11px;color:#aaa;text-decoration:line-through;}
+.pprice .off{font-size:10px;color:#16a34a;font-weight:800;background:#f0fdf4;padding:1px 5px;border-radius:4px;}
+.pstock{font-size:10px;font-weight:600;margin-bottom:6px;}
+.pstock.in{color:#16a34a;}
+.pstock.low{color:#d97706;}
+.pstock.out{color:#dc2626;}
+.enquire-btn{display:block;width:100%;margin-top:auto;background:var(--dark2);color:var(--gold);border:none;border-radius:8px;padding:8px;font-size:12px;font-weight:700;transition:all .2s;}
+.enquire-btn:hover{background:var(--gold);color:var(--dark2);}
+
+/* Sub-category tabs (like Poorvika's Best Seller / 5G / Top Brands) */
+.sub-tabs{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;margin-bottom:18px;padding-bottom:2px;}
+.sub-tabs::-webkit-scrollbar{display:none;}
+.sub-tab{flex-shrink:0;padding:6px 16px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--text);transition:all .2s;white-space:nowrap;}
+.sub-tab.active,.sub-tab:hover{background:var(--dark2);color:var(--gold);border-color:var(--dark2);}
+
+/* Brand logo strip */
+.brand-strip{display:flex;gap:10px;overflow-x:auto;padding:4px 0 10px;margin-bottom:8px;}
+.brand-strip::-webkit-scrollbar{display:none;}
+.brand-logo{flex-shrink:0;background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:8px 16px;font-size:12px;font-weight:700;cursor:pointer;color:var(--text);transition:all .2s;display:flex;align-items:center;gap:6px;white-space:nowrap;}
+.brand-logo:hover,.brand-logo.active{border-color:var(--dark2);background:var(--dark2);color:var(--gold);}
+.brand-logo i{font-size:15px;}
+
+/* Section header Poorvika style */
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.sec-head-left .sec-title{font-size:18px;font-weight:800;color:var(--text);}
+.sec-head-left .sec-sub{font-size:12px;color:var(--muted);margin-top:2px;}
+.sec-see-all{font-size:12px;font-weight:700;color:var(--dark2);border:1.5px solid var(--border);padding:6px 14px;border-radius:20px;display:flex;align-items:center;gap:4px;transition:all .2s;white-space:nowrap;}
+.sec-see-all:hover{background:var(--dark2);color:var(--gold);border-color:var(--dark2);}
+
+/* ===== ACCESSORIES SECTION ===== */
+.acc-tabs{display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;margin-bottom:16px;padding-bottom:2px;}
+.acc-tabs::-webkit-scrollbar{display:none;}
+.acc-tab{flex-shrink:0;display:flex;align-items:center;gap:6px;background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;color:var(--text);transition:all .2s;white-space:nowrap;}
+.acc-tab.active,.acc-tab:hover{background:var(--dark2);color:var(--gold);border-color:var(--dark2);}
+.acc-tab i{font-size:14px;}
+.acc-brand-filter{display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;margin-bottom:16px;padding-bottom:2px;}
+.acc-brand-filter::-webkit-scrollbar{display:none;}
+.acc-brand-btn{flex-shrink:0;background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;cursor:pointer;color:var(--text);transition:all .2s;white-space:nowrap;}
+.acc-brand-btn.active,.acc-brand-btn:hover{background:var(--gold);color:var(--dark2);border-color:var(--gold);}
+
+/* ===== OFFERS BANNER ===== */
+.offers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:28px;}
+.offer-banner{border-radius:14px;padding:22px;position:relative;overflow:hidden;cursor:pointer;transition:transform .2s;}
+.offer-banner:hover{transform:translateY(-2px);}
+.offer-banner.blue{background:linear-gradient(135deg,#1e3a8a,#3b82f6);}
+.offer-banner.purple{background:linear-gradient(135deg,#4c1d95,#8b5cf6);}
+.offer-banner.green{background:linear-gradient(135deg,#14532d,#22c55e);}
+.offer-banner h3{font-size:17px;font-weight:800;color:#fff;margin-bottom:5px;}
+.offer-banner p{font-size:12px;color:#ffffff99;margin-bottom:12px;}
+.offer-banner .tag{display:inline-block;background:#ffffff20;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;}
+.offer-banner-icon{position:absolute;right:-10px;bottom:-10px;font-size:72px;opacity:.15;color:#fff;}
+
+/* ===== FEATURES ===== */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;}
+.feat{background:#fff;border-radius:12px;padding:18px 14px;border:1.5px solid var(--border);text-align:center;transition:all .2s;}
+.feat:hover{border-color:var(--gold);transform:translateY(-2px);}
+.feat-icon{width:52px;height:52px;background:var(--gold)15;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
+.feat-icon i{font-size:26px;color:var(--gold);}
+.feat .ft{font-size:14px;font-weight:700;color:var(--text);}
+.feat .fs{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.4;}
+
+/* ===== CONTACT ===== */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex-wrap:wrap;}
+.contact-card{background:var(--dark2);border-radius:18px;padding:28px 24px;color:#fff;}
+.contact-card h2{font-size:20px;font-weight:800;margin-bottom:6px;}
+.contact-card p{font-size:13px;color:#aaa;margin-bottom:22px;}
+.cinfo{display:flex;flex-direction:column;gap:14px;}
+.crow{display:flex;align-items:center;gap:14px;}
+.cicon{width:40px;height:40px;background:var(--gold)20;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cicon i{font-size:20px;color:var(--gold);}
+.ctxt .cl{font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:.5px;}
+.ctxt .cv{font-size:14px;font-weight:600;color:#fff;margin-top:2px;}
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:700;width:100%;margin-top:20px;transition:opacity .2s;}
+.wa-btn:hover{opacity:.88;}
+.map-card{background:#fff;border-radius:18px;overflow:hidden;border:1.5px solid var(--border);}
+.map-placeholder{background:linear-gradient(135deg,#e8f4fd,#dbeafe);height:100%;min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;}
+.map-placeholder i{font-size:48px;color:#3b82f6;}
+.map-placeholder p{font-size:14px;color:#666;font-weight:600;}
+
+/* ===== ADMIN PANEL ===== */
+.admin-overlay{display:none;position:fixed;inset:0;background:#00000080;z-index:1000;backdrop-filter:blur(4px);}
+.admin-overlay.open{display:flex;align-items:center;justify-content:center;padding:20px;}
+.admin-modal{background:#fff;border-radius:20px;width:100%;max-width:700px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px #0005;}
+.admin-header{background:var(--dark2);padding:20px 24px;border-radius:20px 20px 0 0;display:flex;align-items:center;justify-content:space-between;}
+.admin-header h2{color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;gap:10px;}
+.admin-header h2 i{color:var(--gold);}
+.admin-close{background:#ffffff15;border:none;color:#fff;width:34px;height:34px;border-radius:8px;font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;}
+.admin-close:hover{background:#ffffff30;}
+.admin-body{padding:24px;}
+.admin-tabs{display:flex;gap:8px;margin-bottom:24px;border-bottom:2px solid var(--border);padding-bottom:0;}
+.admin-tab{padding:10px 18px;font-size:13px;font-weight:600;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;}
+.admin-tab.active{color:var(--dark2);border-bottom-color:var(--gold);}
+.admin-panel{display:none;}
+.admin-panel.active{display:block;}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;color:var(--text);outline:none;transition:border-color .2s;font-family:inherit;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.save-btn{background:var(--dark2);color:var(--gold);border:none;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:700;width:100%;margin-top:8px;transition:all .2s;}
+.save-btn:hover{background:var(--gold);color:var(--dark2);}
+.product-list{display:flex;flex-direction:column;gap:10px;max-height:400px;overflow-y:auto;}
+.product-item{display:flex;align-items:center;gap:12px;padding:12px;background:var(--gray);border-radius:10px;border:1.5px solid var(--border);}
+.product-item-icon{width:40px;height:40px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.product-item-info{flex:1;}
+.product-item-info .name{font-size:14px;font-weight:700;}
+.product-item-info .brand{font-size:11px;color:var(--muted);}
+.product-item-price{font-size:15px;font-weight:800;color:var(--dark2);}
+.product-item-actions{display:flex;gap:6px;}
+.edit-btn,.del-btn{width:30px;height:30px;border:none;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;transition:all .2s;}
+.edit-btn{background:#eff6ff;color:#2563eb;}
+.edit-btn:hover{background:#2563eb;color:#fff;}
+.del-btn{background:#fff0f0;color:#dc2626;}
+.del-btn:hover{background:#dc2626;color:#fff;}
+
+/* ===== PRODUCT DETAIL POPUP ===== */
+.pd-overlay{display:none;position:fixed;inset:0;background:#00000085;z-index:500;backdrop-filter:blur(6px);padding:16px;align-items:flex-end;justify-content:center;overflow-y:auto;}
+.pd-overlay.open{display:flex;}
+@media(min-width:600px){.pd-overlay{align-items:center;}}
+.pd-modal{background:#fff;border-radius:24px 24px 16px 16px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;overflow-x:hidden;box-shadow:0 24px 80px #0008;animation:slideUp .3s ease;flex-shrink:0;}
+@media(min-width:600px){.pd-modal{border-radius:20px;animation:fadeIn .25s ease;}}
+@keyframes slideUp{from{transform:translateY(60px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+@keyframes fadeIn{from{opacity:0;transform:scale(.97);}to{opacity:1;transform:scale(1);}}
+.pd-header{background:var(--dark2);padding:18px 20px 16px;border-radius:24px 24px 0 0;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;}
+.pd-header-left{display:flex;align-items:center;gap:14px;}
+.pd-icon{width:56px;height:56px;background:var(--gold)20;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pd-icon i{font-size:30px;color:var(--gold);}
+.pd-title{color:#fff;font-size:17px;font-weight:800;line-height:1.3;}
+.pd-brand-tag{font-size:11px;color:#aaa;margin-top:3px;text-transform:uppercase;letter-spacing:.5px;}
+.pd-close{background:#ffffff15;border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background .2s;}
+.pd-close:hover{background:#ffffff30;}
+.pd-body{padding:20px;}
+/* Price row */
+.pd-price-row{display:flex;align-items:center;justify-content:space-between;background:var(--gray);border-radius:12px;padding:14px 16px;margin-bottom:18px;}
+.pd-price{font-size:24px;font-weight:900;color:var(--dark2);}
+.pd-old{font-size:13px;color:#bbb;text-decoration:line-through;margin-top:2px;}
+.pd-off-badge{background:#dcfce7;color:#16a34a;font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;}
+/* Colors */
+.pd-section{margin-bottom:18px;}
+.pd-section-title{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px;}
+.pd-colors{display:flex;gap:8px;flex-wrap:wrap;}
+.pd-color{width:28px;height:28px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .2s;position:relative;}
+.pd-color.active,.pd-color:hover{border-color:var(--dark2);transform:scale(1.15);}
+.pd-color-name{font-size:12px;color:var(--muted);margin-top:6px;}
+/* Variants */
+.pd-variants{display:flex;gap:8px;flex-wrap:wrap;}
+.pd-variant{background:#f4f6fb;border:1.5px solid var(--border);border-radius:8px;padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer;color:var(--text);transition:all .2s;}
+.pd-variant.active,.pd-variant:hover{background:var(--dark2);color:var(--gold);border-color:var(--dark2);}
+/* Specs grid */
+.pd-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.pd-spec{background:#f9f9fb;border-radius:10px;padding:12px 14px;display:flex;align-items:flex-start;gap:10px;}
+.pd-spec-icon{width:32px;height:32px;background:var(--gold)15;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pd-spec-icon i{font-size:16px;color:var(--gold);}
+.pd-spec-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;}
+.pd-spec-value{font-size:13px;font-weight:700;color:var(--text);margin-top:2px;line-height:1.3;}
+/* Highlights */
+.pd-highlights{display:flex;flex-direction:column;gap:8px;}
+.pd-highlight{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text);}
+.pd-highlight i{color:var(--green);font-size:15px;flex-shrink:0;}
+/* Action buttons */
+.pd-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px;}
+.pd-wa-btn{background:#25D366;color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:opacity .2s;}
+.pd-wa-btn:hover{opacity:.88;}
+.pd-call-btn{background:var(--dark2);color:var(--gold);border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:all .2s;}
+.pd-call-btn:hover{background:var(--gold);color:var(--dark2);}
+
+/* ===== NAV ADMIN ICON (tiny, after search) ===== */
+.nav-admin-icon{background:none;border:none;color:#ffffff25;width:26px;height:26px;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:5px;transition:all .2s;flex-shrink:0;}
+.nav-admin-icon:hover{color:#ffffff60;background:#ffffff10;}
+.nav-admin-icon i{font-size:13px;}
+.nav-admin-icon.loggedin{color:#22c55e !important;}
+
+/* ===== ADMIN LOGIN OVERLAY ===== */
+.login-overlay{display:none;position:fixed;inset:0;background:#00000090;z-index:600;backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;}
+.login-overlay.open{display:flex;}
+.login-modal{background:#fff;border-radius:20px;width:100%;max-width:360px;overflow:hidden;box-shadow:0 24px 60px #0006;animation:fadeIn .25s ease;}
+.login-header{background:var(--dark2);padding:24px 24px 20px;text-align:center;}
+.login-header .lh-icon{width:60px;height:60px;background:var(--gold)20;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
+.login-header .lh-icon i{font-size:28px;color:var(--gold);}
+.login-header h2{color:#fff;font-size:18px;font-weight:800;}
+.login-header p{color:#aaa;font-size:12px;margin-top:4px;}
+.login-body{padding:24px;}
+.login-body .form-group{margin-bottom:16px;}
+.login-body label{display:block;font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px;}
+.login-body input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;color:var(--text);outline:none;transition:border-color .2s;font-family:inherit;}
+.login-body input:focus{border-color:var(--gold);}
+.login-error{background:#fff0f0;color:#dc2626;font-size:12px;font-weight:600;padding:8px 12px;border-radius:8px;margin-bottom:14px;display:none;align-items:center;gap:6px;}
+.login-error.show{display:flex;}
+.login-btn{background:var(--dark2);color:var(--gold);border:none;width:100%;padding:13px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.login-btn:hover{background:var(--gold);color:var(--dark2);}
+.login-cancel{display:block;text-align:center;margin-top:12px;font-size:13px;color:var(--muted);cursor:pointer;transition:color .2s;}
+.login-cancel:hover{color:var(--dark2);}
+
+/* ===== ADMIN LOGOUT BAR ===== */
+.admin-loggedin-bar{display:none;position:fixed;top:64px;right:0;background:var(--gold);color:var(--dark2);font-size:11px;font-weight:700;padding:4px 10px;border-radius:0 0 0 8px;z-index:199;align-items:center;gap:6px;}
+.admin-loggedin-bar.show{display:flex;}
+.admin-logout-btn{background:var(--dark2);color:var(--gold);border:none;border-radius:6px;padding:3px 10px;font-size:11px;font-weight:700;cursor:pointer;}
+
+/* ===== FORGOT PASSWORD UI ===== */
+.fp-method{display:flex;align-items:center;gap:14px;background:#f9f9fb;border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;cursor:pointer;margin-bottom:12px;transition:all .2s;}
+.fp-method:hover{border-color:var(--gold);background:#fffbeb;}
+.fp-method-icon{width:40px;height:40px;background:#fff0e0;color:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.fp-method-title{font-size:14px;font-weight:700;color:var(--text);}
+.fp-method-sub{font-size:12px;color:var(--muted);margin-top:2px;}
+.otp-boxes{display:flex;gap:8px;justify-content:center;}
+.otp-box{width:44px;height:52px;border:2px solid var(--border);border-radius:10px;text-align:center;font-size:22px;font-weight:800;color:var(--dark2);outline:none;transition:border-color .2s;font-family:inherit;}
+.otp-box:focus{border-color:var(--gold);}
+.otp-box.filled{border-color:var(--dark2);background:#fffbeb;}
+
+/* ===== ADMIN INLINE EDIT ===== */
+.edit-form{background:#f4f6fb;border-radius:10px;padding:14px;margin-top:8px;border:1.5px solid var(--gold);display:none;flex-direction:column;gap:10px;}
+.edit-form.open{display:flex;}
+.edit-form .ef-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.edit-form input{width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;color:var(--text);outline:none;font-family:inherit;}
+.edit-form input:focus{border-color:var(--gold);}
+.edit-form label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px;display:block;}
+.ef-save{background:var(--dark2);color:var(--gold);border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;}
+.ef-save:hover{background:var(--gold);color:var(--dark2);}
+.ef-cancel{background:#f0f0f0;color:#666;border:none;border-radius:8px;padding:9px 14px;font-size:13px;font-weight:600;cursor:pointer;}
+
+/* ===== TOAST ===== */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--dark2);color:#fff;padding:14px 20px;border-radius:12px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:10px;z-index:2000;transform:translateY(100px);opacity:0;transition:all .3s;box-shadow:0 8px 24px #0004;}
+.toast.show{transform:translateY(0);opacity:1;}
+.toast i{color:var(--gold);font-size:18px;}
+
+/* ===== FOOTER ===== */
+footer{background:var(--dark);padding:40px 24px 20px;}
+.footer-inner{max-width:1100px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px;flex-wrap:wrap;}
+.footer-brand .logo-text{font-size:18px;font-weight:800;color:#fff;}
+.footer-brand p{font-size:13px;color:#666;margin-top:10px;line-height:1.6;max-width:240px;}
+.footer-col h4{font-size:13px;font-weight:700;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.footer-col ul li a{font-size:13px;color:#666;transition:color .2s;}
+.footer-col ul li a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid #ffffff10;padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-bottom p{font-size:12px;color:#555;}
+.footer-bottom span{color:var(--gold);}
+.social-links{display:flex;gap:10px;}
+.social-links a{width:34px;height:34px;background:#ffffff10;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:16px;transition:all .2s;}
+.social-links a:hover{background:var(--gold);color:var(--dark2);}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .topbar{display:none;}
+  nav{padding:0 16px;}
+  .nav-links{display:none;}
+  .nav-search input{width:100px;}
+  .hero{padding:40px 16px 36px;}
+  .hero h1{font-size:26px;}
+  .hero-visual{display:none;}
+  .contact-wrap{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .products-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}
+}
+@media(max-width:480px){
+  .hero h1{font-size:22px;}
+  .products-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span><i class="ti ti-map-pin"></i> 25, Kattukudalur Rd, Thiruvalluvar Nagar, Virudhachalam, Tamil Nadu 606001</span>
+  <div class="topbar-right">
+    <span><i class="ti ti-phone"></i> 096008 88888</span>
+    <span><i class="ti ti-clock"></i> Opens 8 AM · Mon–Sun</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon"><i class="ti ti-device-mobile"></i></div>
+    <div>
+      <div class="logo-text">MAHAVEER <span>MOBILES</span></div>
+      <div class="logo-sub">Your Trusted Mobile Store</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#" class="active">Home</a>
+    <a href="#phones">Phones</a>
+    <a href="#accessories">Accessories</a>
+    <a href="#offers">Offers</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <div class="nav-search">
+      <i class="ti ti-search"></i>
+      <input type="text" placeholder="Search phones..." id="searchInput" oninput="searchProducts()"/>
+    </div>
+    <button class="cart-btn"><i class="ti ti-shopping-cart"></i><span class="cart-count" id="cartCount">0</span></button>
+    <button class="nav-admin-icon" onclick="openLoginOrAdmin()" id="navAdminBtn" title="Admin">
+      <i class="ti ti-settings" id="navAdminIcon"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg-circle c1"></div>
+  <div class="hero-bg-circle c2"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag"><i class="ti ti-star-filled"></i> Trusted Since 2010</div>
+      <h1>Best Deals on<br><span>Smartphones</span> &<br>Accessories</h1>
+      <p>Top brands, genuine products, unbeatable prices — all under one roof at Mahaveer Mobiles. Latest models with official warranty.</p>
+      <div class="hero-btns">
+        <button class="btn-gold" onclick="document.getElementById('phones').scrollIntoView({behavior:'smooth'})"><i class="ti ti-device-mobile"></i> Explore Phones</button>
+        <button class="btn-ghost" onclick="document.getElementById('accessories').scrollIntoView({behavior:'smooth'})"><i class="ti ti-headphones"></i> Accessories</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="num">1000+</div><div class="lbl">Happy Customers</div></div>
+        <div class="stat"><div class="num">100+</div><div class="lbl">Mobile Models</div></div>
+        <div class="stat"><div class="num">15+</div><div class="lbl">Top Brands</div></div>
+        <div class="stat"><div class="num">⭐ 4.9</div><div class="lbl">Google Rating</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-icon gold"><i class="ti ti-brand-apple"></i></div>
+        <div class="hero-card-info"><div class="title">iPhone 16 Pro Max</div><div class="sub">256GB · Desert Titanium</div></div>
+        <div class="hero-card-price"><div class="price">₹1,59,900</div><div class="old">₹1,69,900</div></div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon blue"><i class="ti ti-brand-samsung"></i></div>
+        <div class="hero-card-info"><div class="title">Samsung Galaxy S25 Ultra</div><div class="sub">256GB · Titanium Black</div></div>
+        <div class="hero-card-price"><div class="price">₹1,29,999</div><div class="old">₹1,39,999</div></div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon green"><i class="ti ti-device-mobile"></i></div>
+        <div class="hero-card-info"><div class="title">OnePlus 13</div><div class="sub">256GB · Midnight Ocean</div></div>
+        <div class="hero-card-price"><div class="price">₹69,999</div><div class="old">₹74,999</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marqueeTrack">
+    <span><i class="ti ti-star-filled"></i> iPhone 16 Series Available</span>
+    <span><i class="ti ti-star-filled"></i> Samsung Galaxy S25 Ultra In Stock</span>
+    <span><i class="ti ti-star-filled"></i> OnePlus 13 – Best Price Guaranteed</span>
+    <span><i class="ti ti-star-filled"></i> Vivo X200 Pro Now Available</span>
+    <span><i class="ti ti-star-filled"></i> Realme GT 7 Pro – New Launch</span>
+    <span><i class="ti ti-star-filled"></i> Free Screen Guard on Every Purchase</span>
+    <span><i class="ti ti-star-filled"></i> EMI Available – 0% Interest</span>
+    <span><i class="ti ti-star-filled"></i> Old Phone Exchange Accepted</span>
+    <span><i class="ti ti-star-filled"></i> iPhone 16 Series Available</span>
+    <span><i class="ti ti-star-filled"></i> Samsung Galaxy S25 Ultra In Stock</span>
+    <span><i class="ti ti-star-filled"></i> OnePlus 13 – Best Price Guaranteed</span>
+    <span><i class="ti ti-star-filled"></i> Vivo X200 Pro Now Available</span>
+    <span><i class="ti ti-star-filled"></i> Realme GT 7 Pro – New Launch</span>
+    <span><i class="ti ti-star-filled"></i> Free Screen Guard on Every Purchase</span>
+    <span><i class="ti ti-star-filled"></i> EMI Available – 0% Interest</span>
+    <span><i class="ti ti-star-filled"></i> Old Phone Exchange Accepted</span>
+  </div>
+</div>
+
+<!-- OFFERS BANNERS -->
+<div class="section" id="offers">
+  <div class="section-head">
+    <div><div class="section-title">🔥 Hot <span>Offers</span></div><div class="section-sub">Limited time deals — grab them fast!</div></div>
+  </div>
+  <div class="offers-grid">
+    <div class="offer-banner blue">
+      <h3>Up to ₹10,000 Off</h3>
+      <p>On iPhone 15 & 16 series with exchange</p>
+      <span class="tag">Exchange Offer</span>
+      <i class="ti ti-brand-apple offer-banner-icon"></i>
+    </div>
+    <div class="offer-banner purple">
+      <h3>0% EMI Available</h3>
+      <p>On all Samsung Galaxy S25 models</p>
+      <span class="tag">No Cost EMI</span>
+      <i class="ti ti-credit-card offer-banner-icon"></i>
+    </div>
+    <div class="offer-banner green">
+      <h3>Free Accessories</h3>
+      <p>Get free case + screen guard on Vivo, Oppo, Realme</p>
+      <span class="tag">Free Gift</span>
+      <i class="ti ti-gift offer-banner-icon"></i>
+    </div>
+  </div>
+</div>
+
+<!-- PHONES SECTION -->
+<div class="section" id="phones" style="padding-top:0;">
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="sec-title">📱 Smartphones</div>
+      <div class="sec-sub">Latest models · Current market prices</div>
+    </div>
+    <span class="sec-see-all">See All <i class="ti ti-arrow-right"></i></span>
+  </div>
+
+  <!-- Sub-tabs like Poorvika -->
+  <div class="sub-tabs" id="phoneSubTabs">
+    <div class="sub-tab active" data-filter="all">All Phones</div>
+    <div class="sub-tab" data-filter="hot">🔥 Best Sellers</div>
+    <div class="sub-tab" data-filter="new">✨ New Arrivals</div>
+    <div class="sub-tab" data-filter="offer">🏷 Offers</div>
+    <div class="sub-tab" data-filter="trending">📈 Trending</div>
+  </div>
+
+  <!-- Brand logo strip -->
+  <div class="brand-strip" id="brandStrip">
+    <div class="brand-logo active" data-brand="all"><i class="ti ti-layout-grid"></i> All</div>
+    <div class="brand-logo" data-brand="Apple"><i class="ti ti-brand-apple"></i> Apple</div>
+    <div class="brand-logo" data-brand="Samsung"><i class="ti ti-brand-samsung"></i> Samsung</div>
+    <div class="brand-logo" data-brand="Vivo"><i class="ti ti-device-mobile"></i> Vivo</div>
+    <div class="brand-logo" data-brand="Oppo"><i class="ti ti-device-mobile"></i> Oppo</div>
+    <div class="brand-logo" data-brand="OnePlus"><i class="ti ti-device-mobile"></i> OnePlus</div>
+    <div class="brand-logo" data-brand="Realme"><i class="ti ti-device-mobile"></i> Realme</div>
+    <div class="brand-logo" data-brand="Redmi"><i class="ti ti-device-mobile"></i> Redmi</div>
+    <div class="brand-logo" data-brand="Poco"><i class="ti ti-device-mobile"></i> Poco</div>
+  </div>
+
+  <!-- Horizontal scroll row with arrows -->
+  <div class="prow-wrap">
+    <div class="prow-arrow left" onclick="scrollRow('phonesRow',-1)"><i class="ti ti-chevron-left"></i></div>
+    <div class="prow" id="phonesRow"></div>
+    <div class="prow-arrow right" onclick="scrollRow('phonesRow',1)"><i class="ti ti-chevron-right"></i></div>
+  </div>
+</div>
+
+<!-- ACCESSORIES SECTION -->
+<div style="background:#fff;padding:32px 0 40px;">
+<div class="section" id="accessories" style="padding-top:0;padding-bottom:0;">
+  <div class="sec-head">
+    <div class="sec-head-left">
+      <div class="sec-title">🎧 Accessories</div>
+      <div class="sec-sub">Original brand accessories — Chargers, Earphones, Cases & more</div>
+    </div>
+    <span class="sec-see-all">See All <i class="ti ti-arrow-right"></i></span>
+  </div>
+  <!-- Type tabs -->
+  <div class="acc-tabs" id="accTypeFilter">
+    <div class="acc-tab active" data-type="all"><i class="ti ti-layout-grid"></i> All</div>
+    <div class="acc-tab" data-type="Charger"><i class="ti ti-plug"></i> Chargers</div>
+    <div class="acc-tab" data-type="Earphones"><i class="ti ti-headphones"></i> Earphones</div>
+    <div class="acc-tab" data-type="Case"><i class="ti ti-device-mobile"></i> Cases</div>
+    <div class="acc-tab" data-type="Cable"><i class="ti ti-plug-connected"></i> Cables</div>
+    <div class="acc-tab" data-type="Screen Guard"><i class="ti ti-shield"></i> Screen Guards</div>
+    <div class="acc-tab" data-type="Power Bank"><i class="ti ti-battery-charging"></i> Power Banks</div>
+  </div>
+  <!-- Brand filter -->
+  <div class="acc-brand-filter" id="accBrandFilter">
+    <button class="acc-brand-btn active" data-brand="all">All Brands</button>
+    <button class="acc-brand-btn" data-brand="Apple">Apple</button>
+    <button class="acc-brand-btn" data-brand="Samsung">Samsung</button>
+    <button class="acc-brand-btn" data-brand="Vivo">Vivo</button>
+    <button class="acc-brand-btn" data-brand="Oppo">Oppo</button>
+    <button class="acc-brand-btn" data-brand="OnePlus">OnePlus</button>
+    <button class="acc-brand-btn" data-brand="Realme">Realme</button>
+    <button class="acc-brand-btn" data-brand="Redmi">Redmi</button>
+    <button class="acc-brand-btn" data-brand="Poco">Poco</button>
+  </div>
+  <!-- Horizontal scroll row -->
+  <div class="prow-wrap">
+    <div class="prow-arrow left" onclick="scrollRow('accessoriesRow',-1)"><i class="ti ti-chevron-left"></i></div>
+    <div class="prow" id="accessoriesRow"></div>
+    <div class="prow-arrow right" onclick="scrollRow('accessoriesRow',1)"><i class="ti ti-chevron-right"></i></div>
+  </div>
+</div>
+</div>
+
+<!-- WHY US -->
+<div class="section">
+  <div class="section-head">
+    <div><div class="section-title">Why Choose <span>Us?</span></div><div class="section-sub">We make your mobile buying experience great</div></div>
+  </div>
+  <div class="features-grid">
+    <div class="feat"><div class="feat-icon"><i class="ti ti-certificate"></i></div><div class="ft">100% Genuine</div><div class="fs">Only original products with brand seal</div></div>
+    <div class="feat"><div class="feat-icon"><i class="ti ti-currency-rupee"></i></div><div class="ft">Best Price</div><div class="fs">Price match guarantee, no hidden charges</div></div>
+    <div class="feat"><div class="feat-icon"><i class="ti ti-shield-check"></i></div><div class="ft">Full Warranty</div><div class="fs">Official brand warranty on all products</div></div>
+    <div class="feat"><div class="feat-icon"><i class="ti ti-tool"></i></div><div class="ft">Quick Repair</div><div class="fs">Same day mobile repair service</div></div>
+    <div class="feat"><div class="feat-icon"><i class="ti ti-exchange"></i></div><div class="ft">Exchange</div><div class="fs">Best value for your old phone</div></div>
+    <div class="feat"><div class="feat-icon"><i class="ti ti-credit-card"></i></div><div class="ft">Easy EMI</div><div class="fs">0% interest EMI on all major cards</div></div>
+    <div class="feat"><div class="feat-icon"><i class="ti ti-truck-delivery"></i></div><div class="ft">Home Delivery</div><div class="fs">Fast delivery to your doorstep</div></div>
+    <div class="feat"><div class="feat-icon"><i class="ti ti-headset"></i></div><div class="ft">24/7 Support</div><div class="fs">Always here to help you</div></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <div class="section-head">
+    <div><div class="section-title">📍 Visit Our <span>Store</span></div><div class="section-sub">We're here to help you pick the perfect phone!</div></div>
+  </div>
+  <div class="contact-wrap">
+    <div class="contact-card">
+      <h2>Get In Touch</h2>
+      <p>Visit us or reach out — we're always happy to help!</p>
+      <div class="cinfo">
+        <div class="crow">
+          <div class="cicon"><i class="ti ti-map-pin"></i></div>
+          <div class="ctxt"><div class="cl">Address</div><div class="cv">25, Kattukudalur Rd, Thiruvalluvar Nagar,<br>Virudhachalam, Tamil Nadu – 606001</div></div>
+        </div>
+        <div class="crow">
+          <div class="cicon"><i class="ti ti-phone"></i></div>
+          <div class="ctxt"><div class="cl">Call Us</div><div class="cv"><a href="tel:09600888888" style="color:#fff;text-decoration:none;">096008 88888</a></div></div>
+        </div>
+        <div class="crow">
+          <div class="cicon"><i class="ti ti-star-filled"></i></div>
+          <div class="ctxt"><div class="cl">Google Rating</div><div class="cv" style="color:#f7c948;">⭐ 4.9 / 5 — Highly Rated Store</div></div>
+        </div>
+        <div class="crow">
+          <div class="cicon"><i class="ti ti-clock"></i></div>
+          <div class="ctxt"><div class="cl">Shop Hours</div><div class="cv">Open Daily · From 8:00 AM</div></div>
+        </div>
+      </div>
+      <button class="wa-btn" onclick="window.open('https://wa.me/919600888888?text=Hi, I want to enquire about a phone','_blank')"><i class="ti ti-brand-whatsapp"></i> Chat on WhatsApp</button>
+    </div>
+    <div class="map-card" style="overflow:hidden;border-radius:18px;border:1.5px solid var(--border);background:#fff;">
+
+      <!-- Live Google Maps embed — works perfectly when hosted online -->
+      <div id="mapEmbed" style="display:block;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.4532!2d79.32383!3d11.51661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab4a7a35af1339%3A0x75cc20b49b1af999!2sMahaveer%20Mobiles!5e0!3m2!1sen!2sin!4v1746700800000!5m2!1sen!2sin"
+          width="100%" height="300" style="border:0;display:block;"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mahaveer Mobiles - Virudhachalam"
+          onerror="document.getElementById('mapEmbed').style.display='none';document.getElementById('mapFallback').style.display='flex';">
+        </iframe>
+      </div>
+
+      <!-- Fallback shown if embed is blocked (e.g. opened as local file) -->
+      <div id="mapFallback" style="display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px 20px;background:linear-gradient(135deg,#e8f4fd,#dbeafe);min-height:220px;text-align:center;">
+        <i class="ti ti-map-2" style="font-size:52px;color:#3b82f6;"></i>
+        <div>
+          <div style="font-size:15px;font-weight:800;color:#1a1a2e;">Mahaveer Mobiles</div>
+          <div style="font-size:13px;color:#555;margin-top:6px;line-height:1.6;">25, Kattukudalur Rd, Thiruvalluvar Nagar<br>Virudhachalam, Tamil Nadu – 606001</div>
+        </div>
+        <a href="https://www.google.com/maps/place/Mahaveer+Mobiles/@11.5166067,79.3266344,17z/data=!3m1!4b1!4m6!3m5!1s0x3bab4a7a35af1339:0x75cc20b49b1af999!8m2!3d11.5166067!4d79.3266344"
+          target="_blank" rel="noopener"
+          style="background:#1a1a2e;color:#f7c948;padding:10px 22px;border-radius:10px;font-size:13px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:8px;">
+          <i class="ti ti-map-pin"></i> View on Google Maps
+        </a>
+      </div>
+
+      <!-- Bottom bar with address + navigation buttons -->
+      <div style="padding:14px 16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid #f0f0f0;">
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#1a1a2e;">📍 Mahaveer Mobiles</div>
+          <div style="font-size:12px;color:#888;margin-top:2px;">25, Kattukudalur Rd, Virudhachalam, TN 606001</div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <a href="https://www.google.com/maps/place/Mahaveer+Mobiles/@11.5166067,79.3266344,17z/data=!3m1!4b1!4m6!3m5!1s0x3bab4a7a35af1339:0x75cc20b49b1af999!8m2!3d11.5166067!4d79.3266344"
+            target="_blank" rel="noopener"
+            style="background:#1a1a2e;color:#f7c948;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:6px;text-decoration:none;">
+            <i class="ti ti-map-pin"></i> Get Directions
+          </a>
+          <a href="tel:09600888888"
+            style="background:#25D366;color:#fff;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:6px;text-decoration:none;">
+            <i class="ti ti-phone"></i> Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-text">MAHAVEER <span style="color:var(--gold)">MOBILES</span></div>
+        <p>Your trusted mobile store since 2010. We offer genuine products, best prices, and excellent after-sales service.<br><span style="color:#f7c948;font-size:12px;">📍 25, Kattukudalur Rd, Virudhachalam, TN 606001 · 📞 096008 88888</span></p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#phones">Phones</a></li>
+          <li><a href="#accessories">Accessories</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Brands</h4>
+        <ul>
+          <li><a href="#">Apple iPhone</a></li>
+          <li><a href="#">Samsung</a></li>
+          <li><a href="#">Vivo</a></li>
+          <li><a href="#">Oppo</a></li>
+          <li><a href="#">OnePlus</a></li>
+          <li><a href="#">Realme</a></li>
+          <li><a href="#">Redmi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Mobile Repair</a></li>
+          <li><a href="#">Phone Exchange</a></li>
+          <li><a href="#">EMI Plans</a></li>
+          <li><a href="#">Home Delivery</a></li>
+          <li><a href="#">Warranty Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span>Mahaveer Mobiles</span> — All Rights Reserved. Prices subject to change.</p>
+      <div class="social-links">
+        <a href="#"><i class="ti ti-brand-facebook"></i></a>
+        <a href="#"><i class="ti ti-brand-instagram"></i></a>
+        <a href="#"><i class="ti ti-brand-whatsapp"></i></a>
+        <a href="#"><i class="ti ti-brand-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ADMIN LOGGED-IN BAR -->
+<div class="admin-loggedin-bar" id="adminBar">
+  <i class="ti ti-shield-check"></i> Admin Mode ON
+  <button class="admin-logout-btn" onclick="adminLogout()">Logout</button>
+</div>
+
+<!-- ADMIN LOGIN MODAL -->
+<div class="login-overlay" id="loginOverlay" onclick="closeLoginOutside(event)">
+  <div class="login-modal">
+
+    <!-- STEP 1: LOGIN -->
+    <div id="stepLogin">
+      <div class="login-header">
+        <div class="lh-icon"><i class="ti ti-lock"></i></div>
+        <h2>Admin Login</h2>
+        <p>Enter your credentials to continue</p>
+      </div>
+      <div class="login-body">
+        <div class="login-error" id="loginError"><i class="ti ti-alert-circle"></i> <span id="loginErrMsg">Invalid ID or Password</span></div>
+        <div class="form-group">
+          <label>Admin ID</label>
+          <input type="text" id="loginId" placeholder="Enter Admin ID" autocomplete="off"/>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div style="position:relative;">
+            <input type="password" id="loginPwd" placeholder="Enter Password" onkeydown="if(event.key==='Enter')doLogin()" style="padding-right:40px;"/>
+            <span onclick="togglePwd('loginPwd',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);cursor:pointer;color:#aaa;font-size:16px;">👁</span>
+          </div>
+        </div>
+        <button class="login-btn" onclick="doLogin()"><i class="ti ti-login"></i> Login</button>
+        <div style="text-align:center;margin-top:14px;">
+          <span class="login-cancel" onclick="showForgotStep1()" style="color:var(--blue);font-weight:600;">🔑 Forgot Password?</span>
+        </div>
+        <span class="login-cancel" onclick="closeLogin()">Cancel</span>
+      </div>
+    </div>
+
+    <!-- STEP 2: FORGOT — Choose method -->
+    <div id="stepForgot1" style="display:none;">
+      <div class="login-header">
+        <div class="lh-icon"><i class="ti ti-key"></i></div>
+        <h2>Forgot Password</h2>
+        <p>Choose how to receive your OTP</p>
+      </div>
+      <div class="login-body">
+        <div class="fp-method" onclick="selectFPMethod('phone')">
+          <div class="fp-method-icon"><i class="ti ti-device-mobile"></i></div>
+          <div>
+            <div class="fp-method-title">Phone Number</div>
+            <div class="fp-method-sub">OTP sent to +91 96008 88888</div>
+          </div>
+          <i class="ti ti-chevron-right" style="margin-left:auto;color:#aaa;"></i>
+        </div>
+        <div class="fp-method" onclick="selectFPMethod('email')">
+          <div class="fp-method-icon" style="background:#eff6ff;color:#3b82f6;"><i class="ti ti-mail"></i></div>
+          <div>
+            <div class="fp-method-title">Email Address</div>
+            <div class="fp-method-sub">OTP sent to mah****@gmail.com</div>
+          </div>
+          <i class="ti ti-chevron-right" style="margin-left:auto;color:#aaa;"></i>
+        </div>
+        <span class="login-cancel" onclick="showLoginStep()">← Back to Login</span>
+      </div>
+    </div>
+
+    <!-- STEP 3: ENTER OTP -->
+    <div id="stepForgot2" style="display:none;">
+      <div class="login-header">
+        <div class="lh-icon"><i class="ti ti-message-2"></i></div>
+        <h2>Enter OTP</h2>
+        <p id="otpSentMsg">OTP sent to your phone</p>
+      </div>
+      <div class="login-body">
+        <div class="login-error" id="otpError"><i class="ti ti-alert-circle"></i> <span id="otpErrMsg">Invalid OTP</span></div>
+        <div style="text-align:center;margin-bottom:18px;">
+          <div style="font-size:13px;color:#666;margin-bottom:14px;">Enter the 6-digit OTP</div>
+          <div class="otp-boxes" id="otpBoxes">
+            <input class="otp-box" maxlength="1" type="text" inputmode="numeric" oninput="otpNext(this,0)"/>
+            <input class="otp-box" maxlength="1" type="text" inputmode="numeric" oninput="otpNext(this,1)"/>
+            <input class="otp-box" maxlength="1" type="text" inputmode="numeric" oninput="otpNext(this,2)"/>
+            <input class="otp-box" maxlength="1" type="text" inputmode="numeric" oninput="otpNext(this,3)"/>
+            <input class="otp-box" maxlength="1" type="text" inputmode="numeric" oninput="otpNext(this,4)"/>
+            <input class="otp-box" maxlength="1" type="text" inputmode="numeric" oninput="otpNext(this,5)"/>
+          </div>
+          <div style="font-size:12px;color:#aaa;margin-top:12px;">
+            Didn't receive? <span onclick="resendOTP()" style="color:var(--blue);font-weight:600;cursor:pointer;" id="resendBtn">Resend OTP</span>
+            <span id="resendTimer" style="display:none;color:#aaa;"> (wait <span id="timerCount">30</span>s)</span>
+          </div>
+        </div>
+        <button class="login-btn" onclick="verifyOTP()"><i class="ti ti-check"></i> Verify OTP</button>
+        <span class="login-cancel" onclick="showForgotStep1()">← Back</span>
+      </div>
+    </div>
+
+    <!-- STEP 4: SET NEW ID & PASSWORD -->
+    <div id="stepForgot3" style="display:none;">
+      <div class="login-header">
+        <div class="lh-icon" style="background:#dcfce7;"><i class="ti ti-shield-check" style="color:#16a34a;"></i></div>
+        <h2>Create New Credentials</h2>
+        <p>Set your new Admin ID and Password</p>
+      </div>
+      <div class="login-body">
+        <div class="login-error" id="resetError"><i class="ti ti-alert-circle"></i> <span id="resetErrMsg">Error</span></div>
+        <div class="form-group">
+          <label>New Admin ID</label>
+          <input type="text" id="newAdminId" placeholder="Enter new Admin ID" autocomplete="off"/>
+        </div>
+        <div class="form-group">
+          <label>New Password</label>
+          <div style="position:relative;">
+            <input type="password" id="newPwd" placeholder="Min 6 characters" style="padding-right:40px;"/>
+            <span onclick="togglePwd('newPwd',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);cursor:pointer;color:#aaa;font-size:16px;">👁</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <div style="position:relative;">
+            <input type="password" id="confirmPwd" placeholder="Re-enter password" style="padding-right:40px;" onkeydown="if(event.key==='Enter')resetCredentials()"/>
+            <span onclick="togglePwd('confirmPwd',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);cursor:pointer;color:#aaa;font-size:16px;">👁</span>
+          </div>
+        </div>
+        <button class="login-btn" onclick="resetCredentials()" style="background:#16a34a;"><i class="ti ti-check"></i> Save New Credentials</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PRODUCT DETAIL POPUP -->
+<div class="pd-overlay" id="pdOverlay" onclick="closePD(event)">
+  <div class="pd-modal" id="pdModal">
+    <div class="pd-header">
+      <div class="pd-header-left">
+        <div class="pd-icon"><i class="ti ti-device-mobile" id="pdIcon"></i></div>
+        <div>
+          <div class="pd-title" id="pdTitle">iPhone 16 Pro</div>
+          <div class="pd-brand-tag" id="pdBrand">Apple</div>
+        </div>
+      </div>
+      <button class="pd-close" onclick="document.getElementById('pdOverlay').classList.remove('open')"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="pd-body">
+      <!-- Price -->
+      <div class="pd-price-row">
+        <div>
+          <div class="pd-price" id="pdPrice">₹1,34,900</div>
+          <div class="pd-old" id="pdOld">₹1,44,900</div>
+        </div>
+        <div class="pd-off-badge" id="pdOff">7% OFF</div>
+      </div>
+      <!-- Colors -->
+      <div class="pd-section" id="pdColorSection">
+        <div class="pd-section-title">Available Colors</div>
+        <div class="pd-colors" id="pdColors"></div>
+        <div class="pd-color-name" id="pdColorName"></div>
+      </div>
+      <!-- Storage Variants -->
+      <div class="pd-section" id="pdStorageSection">
+        <div class="pd-section-title">Storage Options</div>
+        <div class="pd-variants" id="pdStorage"></div>
+      </div>
+      <!-- RAM Variants -->
+      <div class="pd-section" id="pdRamSection">
+        <div class="pd-section-title">RAM Options</div>
+        <div class="pd-variants" id="pdRam"></div>
+      </div>
+      <!-- Specs -->
+      <div class="pd-section">
+        <div class="pd-section-title">Key Specifications</div>
+        <div class="pd-specs" id="pdSpecs"></div>
+      </div>
+      <!-- Highlights -->
+      <div class="pd-section">
+        <div class="pd-section-title">Highlights</div>
+        <div class="pd-highlights" id="pdHighlights"></div>
+      </div>
+      <!-- Actions -->
+      <div class="pd-actions">
+        <button class="pd-wa-btn" id="pdWaBtn"><i class="ti ti-brand-whatsapp"></i> WhatsApp</button>
+        <button class="pd-call-btn" onclick="window.location.href='tel:09600888888'"><i class="ti ti-phone"></i> Call Store</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-modal">
+    <div class="admin-header">
+      <h2><i class="ti ti-settings"></i> Admin Panel</h2>
+      <button class="admin-close" onclick="closeAdmin()"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="admin-body">
+      <div class="admin-tabs">
+        <div class="admin-tab active" onclick="switchAdminTab('add')">Add Product</div>
+        <div class="admin-tab" onclick="switchAdminTab('manage')">Manage Products</div>
+        <div class="admin-tab" onclick="switchAdminTab('acc')">Add Accessory</div>
+      </div>
+      <!-- ADD PHONE -->
+      <div class="admin-panel active" id="panel-add">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Brand</label>
+            <select id="addBrand">
+              <option>Apple</option><option>Samsung</option><option>Vivo</option>
+              <option>Oppo</option><option>OnePlus</option><option>Realme</option>
+              <option>Redmi</option><option>Poco</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Model Name</label>
+            <input type="text" id="addName" placeholder="e.g. iPhone 16 Pro"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price (₹)</label>
+            <input type="number" id="addPrice" placeholder="e.g. 79999"/>
+          </div>
+          <div class="form-group">
+            <label>Original Price (₹)</label>
+            <input type="number" id="addOldPrice" placeholder="e.g. 84999"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Badge</label>
+            <select id="addBadge">
+              <option value="">None</option>
+              <option value="hot">🔥 Hot</option>
+              <option value="new">✨ New</option>
+              <option value="offer">🏷 Offer</option>
+              <option value="trending">📈 Trending</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Stock Status</label>
+            <select id="addStock">
+              <option value="in">In Stock</option>
+              <option value="low">Low Stock</option>
+              <option value="out">Out of Stock</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Rating (1–5)</label>
+          <input type="number" id="addRating" min="1" max="5" step="0.1" placeholder="e.g. 4.5"/>
+        </div>
+        <button class="save-btn" onclick="addPhone()"><i class="ti ti-plus"></i> Add Phone</button>
+      </div>
+      <!-- MANAGE -->
+      <div class="admin-panel" id="panel-manage">
+        <p style="font-size:12px;color:#888;margin-bottom:12px;">Click ✏️ Edit on any product to update its price. Changes apply instantly on the website.</p>
+        <div class="product-list" id="adminProductList"></div>
+      </div>
+      <!-- ADD ACCESSORY -->
+      <div class="admin-panel" id="panel-acc">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Brand</label>
+            <select id="accAddBrand">
+              <option>Apple</option><option>Samsung</option><option>Vivo</option>
+              <option>Oppo</option><option>OnePlus</option><option>Realme</option>
+              <option>Redmi</option><option>Poco</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Type</label>
+            <select id="accAddType">
+              <option>Charger</option><option>Earphones</option><option>Case</option>
+              <option>Cable</option><option>Screen Guard</option><option>Power Bank</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" id="accAddName" placeholder="e.g. 67W SuperVOOC Charger"/>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price (₹)</label>
+            <input type="number" id="accAddPrice" placeholder="e.g. 1299"/>
+          </div>
+          <div class="form-group">
+            <label>Original Price (₹)</label>
+            <input type="number" id="accAddOldPrice" placeholder="e.g. 1599"/>
+          </div>
+        </div>
+        <button class="save-btn" onclick="addAccessory()"><i class="ti ti-plus"></i> Add Accessory</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><i class="ti ti-check"></i> <span id="toastMsg">Done!</span></div>
+
+<script>
+// ===== PHONE IMAGE URLs =====
+// GSMArena thumbnail images — load reliably when online
+const phoneImages = {
+  1:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
+  2:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro.jpg",
+  3:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16.jpg",
+  4:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg",
+  5:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-plus.jpg",
+  6:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25-ultra.jpg",
+  7:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25+.jpg",
+  8:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25.jpg",
+  9:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a56-5g.jpg",
+  10:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a36-5g.jpg",
+  11:"https://fdn2.gsmarena.com/vv/bigpic/vivo-x200-pro.jpg",
+  12:"https://fdn2.gsmarena.com/vv/bigpic/vivo-x200.jpg",
+  13:"https://fdn2.gsmarena.com/vv/bigpic/vivo-v40-pro.jpg",
+  14:"https://fdn2.gsmarena.com/vv/bigpic/vivo-v40.jpg",
+  15:"https://fdn2.gsmarena.com/vv/bigpic/vivo-t3-ultra.jpg",
+  16:"https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x8-pro.jpg",
+  17:"https://fdn2.gsmarena.com/vv/bigpic/oppo-reno13-pro.jpg",
+  18:"https://fdn2.gsmarena.com/vv/bigpic/oppo-reno13.jpg",
+  19:"https://fdn2.gsmarena.com/vv/bigpic/oppo-a3-pro.jpg",
+  20:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-13.jpg",
+  21:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-13r.jpg",
+  22:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-4.jpg",
+  23:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce4.jpg",
+  24:"https://fdn2.gsmarena.com/vv/bigpic/realme-gt7-pro.jpg",
+  25:"https://fdn2.gsmarena.com/vv/bigpic/realme-14-pro+.jpg",
+  26:"https://fdn2.gsmarena.com/vv/bigpic/realme-14-pro.jpg",
+  27:"https://fdn2.gsmarena.com/vv/bigpic/realme-narzo-70-pro.jpg",
+  28:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14-pro+.jpg",
+  29:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14-pro.jpg",
+  30:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14.jpg",
+  31:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-14c.jpg",
+  32:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x7-pro.jpg",
+  33:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x7.jpg",
+  34:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m7-pro.jpg",
+};
+
+// Accessory images — using open Wikimedia / manufacturer press images
+const accImages = {
+  // Apple
+  101:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHJA3?wid=400&hei=400&fmt=jpeg&qlt=90",
+  102:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJY3?wid=400&hei=400&fmt=jpeg&qlt=90",
+  103:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXP93?wid=400&hei=400&fmt=jpeg&qlt=90",
+  104:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQGQ3?wid=400&hei=400&fmt=jpeg&qlt=90",
+  105:"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQKQ3?wid=400&hei=400&fmt=jpeg&qlt=90",
+  // Samsung
+  106:"https://fdn2.gsmarena.com/vv/bigpic/samsung-45w-charger.jpg",
+  107:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-buds3-pro.jpg",
+  108:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-buds3.jpg",
+  109:"https://fdn2.gsmarena.com/vv/bigpic/samsung-25w-charger.jpg",
+  // OnePlus
+  121:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-100w-charger.jpg",
+  122:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-buds-3-pro.jpg",
+  123:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-buds-3.jpg",
+};
+
+// ===== PRODUCT SPECS DATABASE =====
+const specsDB = {
+  // ---- APPLE ----
+  1:{colors:[{name:"Desert Titanium",hex:"#c8b89a"},{name:"Black Titanium",hex:"#3a3a3a"},{name:"White Titanium",hex:"#f0ede8"},{name:"Natural Titanium",hex:"#a8a49e"}],storage:["256GB","512GB","1TB"],ram:["8GB"],specs:{display:'6.9" Super Retina XDR OLED',processor:"Apple A18 Pro",camera:"48MP + 48MP + 12MP Triple",battery:"4685 mAh",charging:"30W Fast Charge",os:"iOS 18",network:"5G"},highlights:["Titanium design with Action Button","ProMotion 120Hz Always-On Display","USB-C with USB 3 speeds","Emergency SOS via Satellite","Face ID security"]},
+  2:{colors:[{name:"Desert Titanium",hex:"#c8b89a"},{name:"Black Titanium",hex:"#3a3a3a"},{name:"White Titanium",hex:"#f0ede8"},{name:"Natural Titanium",hex:"#a8a49e"}],storage:["128GB","256GB","512GB","1TB"],ram:["8GB"],specs:{display:'6.3" Super Retina XDR OLED',processor:"Apple A18 Pro",camera:"48MP + 48MP + 12MP Triple",battery:"3582 mAh",charging:"30W Fast Charge",os:"iOS 18",network:"5G"},highlights:["Titanium build with ProMotion 120Hz","A18 Pro chip — fastest iPhone chip","4K 120fps video recording","USB-C with USB 3","Face ID & Emergency SOS"]},
+  3:{colors:[{name:"Ultramarine",hex:"#4169a0"},{name:"Teal",hex:"#3a8a7a"},{name:"Pink",hex:"#e8a0b0"},{name:"White",hex:"#f5f5f5"},{name:"Black",hex:"#1a1a1a"}],storage:["128GB","256GB","512GB"],ram:["8GB"],specs:{display:'6.1" Super Retina XDR OLED',processor:"Apple A18",camera:"48MP + 12MP Dual",battery:"3561 mAh",charging:"25W Fast Charge",os:"iOS 18",network:"5G"},highlights:["A18 chip with 5-core GPU","Camera Control button","4K 60fps Dolby Vision video","MagSafe & Qi2 wireless charging","Face ID security"]},
+  4:{colors:[{name:"Black",hex:"#1a1a1a"},{name:"Blue",hex:"#4a7ab5"},{name:"Green",hex:"#4a8a5a"},{name:"Yellow",hex:"#f0d060"},{name:"Pink",hex:"#e8a0b0"}],storage:["128GB","256GB","512GB"],ram:["6GB"],specs:{display:'6.1" Super Retina XDR OLED',processor:"Apple A16 Bionic",camera:"48MP + 12MP Dual",battery:"3349 mAh",charging:"25W Fast Charge",os:"iOS 18",network:"5G"},highlights:["A16 Bionic chip","Dynamic Island","48MP main camera","USB-C connector","Face ID & MagSafe"]},
+  5:{colors:[{name:"Black",hex:"#1a1a1a"},{name:"Blue",hex:"#4a7ab5"},{name:"Green",hex:"#4a8a5a"},{name:"Yellow",hex:"#f0d060"},{name:"Pink",hex:"#e8a0b0"}],storage:["128GB","256GB","512GB"],ram:["6GB"],specs:{display:'6.7" Super Retina XDR OLED',processor:"Apple A16 Bionic",camera:"48MP + 12MP Dual",battery:"4383 mAh",charging:"25W Fast Charge",os:"iOS 18",network:"5G"},highlights:["Large 6.7\" display","A16 Bionic chip","Dynamic Island","USB-C connector","MagSafe wireless charging"]},
+  // ---- SAMSUNG ----
+  6:{colors:[{name:"Titanium Black",hex:"#2a2a2a"},{name:"Titanium Gray",hex:"#6a6a6a"},{name:"Titanium Silverblue",hex:"#8a9ab0"},{name:"Titanium Whitesilver",hex:"#e8e8e0"}],storage:["256GB","512GB","1TB"],ram:["12GB"],specs:{display:'6.9" QHD+ Dynamic AMOLED 2X',processor:"Snapdragon 8 Elite",camera:"200MP + 50MP + 10MP + 10MP",battery:"5000 mAh",charging:"45W Fast + 15W Wireless",os:"Android 15 / One UI 7",network:"5G"},highlights:["200MP ProVisual Engine camera","Built-in S Pen","7 years OS & security updates","Titanium frame design","AI-powered Galaxy AI features"]},
+  7:{colors:[{name:"Icy Blue",hex:"#a0c0d8"},{name:"Silver Shadow",hex:"#c0c0c0"},{name:"Midnight",hex:"#1a1a2e"}],storage:["256GB","512GB"],ram:["12GB"],specs:{display:'6.7" QHD+ Dynamic AMOLED 2X',processor:"Snapdragon 8 Elite",camera:"50MP + 10MP + 50MP Triple",battery:"4900 mAh",charging:"45W Fast + 15W Wireless",os:"Android 15 / One UI 7",network:"5G"},highlights:["Snapdragon 8 Elite processor","ProVisual Engine camera","7 years OS updates","Galaxy AI features","Titanium design"]},
+  8:{colors:[{name:"Icy Blue",hex:"#a0c0d8"},{name:"Silver Shadow",hex:"#c0c0c0"},{name:"Midnight",hex:"#1a1a2e"},{name:"Coral Red",hex:"#e05040"}],storage:["128GB","256GB"],ram:["12GB"],specs:{display:'6.2" FHD+ Dynamic AMOLED 2X',processor:"Snapdragon 8 Elite",camera:"50MP + 12MP + 10MP Triple",battery:"4000 mAh",charging:"25W Fast + 15W Wireless",os:"Android 15 / One UI 7",network:"5G"},highlights:["Compact flagship design","Snapdragon 8 Elite","Galaxy AI features","7 years OS updates","Bright 2600 nits display"]},
+  9:{colors:[{name:"Awesome Navy",hex:"#2a3a5a"},{name:"Awesome Lime",hex:"#8ab840"},{name:"Awesome White",hex:"#f0f0f0"},{name:"Awesome Black",hex:"#1a1a1a"}],storage:["128GB","256GB"],ram:["8GB","12GB"],specs:{display:'6.7" FHD+ Super AMOLED',processor:"Exynos 1580",camera:"50MP + 12MP + 5MP Triple",battery:"5000 mAh",charging:"45W Fast Charge",os:"Android 15 / One UI 7",network:"5G"},highlights:["45W super fast charging","50MP OIS main camera","IP67 water resistance","4 years OS updates","Bright 1200 nits display"]},
+  10:{colors:[{name:"Awesome Navy",hex:"#2a3a5a"},{name:"Awesome Lime",hex:"#8ab840"},{name:"Awesome White",hex:"#f0f0f0"},{name:"Awesome Black",hex:"#1a1a1a"}],storage:["128GB","256GB"],ram:["8GB"],specs:{display:'6.6" FHD+ Super AMOLED',processor:"Exynos 1380",camera:"50MP + 12MP + 5MP Triple",battery:"5000 mAh",charging:"25W Fast Charge",os:"Android 15 / One UI 7",network:"5G"},highlights:["50MP OIS main camera","5000 mAh long battery","IP67 water resistance","4 years OS updates","Smooth 120Hz display"]},
+  // ---- VIVO ----
+  11:{colors:[{name:"Cosmos Black",hex:"#1a1a2e"},{name:"Titanium Grey",hex:"#7a7a7a"},{name:"Startrail Blue",hex:"#3a5a8a"}],storage:["256GB","512GB","1TB"],ram:["12GB","16GB"],specs:{display:'6.67" LTPO AMOLED 120Hz',processor:"Dimensity 9400",camera:"50MP Zeiss + 50MP + 200MP Periscope",battery:"5800 mAh",charging:"90W FlashCharge + 30W Wireless",os:"Android 15 / OriginOS 5",network:"5G"},highlights:["200MP periscope telephoto camera","Zeiss optics co-engineered","90W ultra-fast charging","IP68 water & dust resistance","Dimensity 9400 flagship chip"]},
+  12:{colors:[{name:"Cosmos Black",hex:"#1a1a2e"},{name:"Startrail Blue",hex:"#3a5a8a"},{name:"Titanium Grey",hex:"#7a7a7a"}],storage:["256GB","512GB"],ram:["12GB","16GB"],specs:{display:'6.67" LTPO AMOLED 120Hz',processor:"Dimensity 9400",camera:"50MP Zeiss + 50MP + 50MP Triple",battery:"5500 mAh",charging:"90W FlashCharge",os:"Android 15 / OriginOS 5",network:"5G"},highlights:["Zeiss co-engineered cameras","Dimensity 9400 chip","90W fast charging","IP68 rated","Slim & premium design"]},
+  13:{colors:[{name:"Titanium Gold",hex:"#c8a840"},{name:"Titanium Black",hex:"#2a2a2a"},{name:"Titanium Blue",hex:"#3a5a8a"}],storage:["128GB","256GB"],ram:["8GB","12GB"],specs:{display:'6.78" AMOLED 120Hz',processor:"Snapdragon 7 Gen 3",camera:"50MP + 50MP + 8MP Triple",battery:"5500 mAh",charging:"80W FlashCharge",os:"Android 14 / OriginOS 4",network:"5G"},highlights:["Snapdragon 7 Gen 3 processor","80W ultra-fast charging","50MP dual main cameras","Slim 7.59mm design","IP64 splash resistance"]},
+  14:{colors:[{name:"Titanium Gold",hex:"#c8a840"},{name:"Titanium Black",hex:"#2a2a2a"},{name:"Titanium Blue",hex:"#3a5a8a"}],storage:["128GB","256GB"],ram:["8GB","12GB"],specs:{display:'6.78" AMOLED 120Hz',processor:"Snapdragon 7 Gen 3",camera:"50MP + 8MP Dual",battery:"5500 mAh",charging:"80W FlashCharge",os:"Android 14 / OriginOS 4",network:"5G"},highlights:["Snapdragon 7 Gen 3","80W fast charging","5500 mAh large battery","120Hz smooth display","Slim premium design"]},
+  15:{colors:[{name:"Titanium Black",hex:"#2a2a2a"},{name:"Titanium Blue",hex:"#3a5a8a"},{name:"Titanium Gold",hex:"#c8a840"}],storage:["128GB","256GB"],ram:["8GB","12GB"],specs:{display:'6.78" AMOLED 144Hz',processor:"Dimensity 9300+",camera:"50MP + 50MP + 8MP Triple",battery:"6000 mAh",charging:"80W FlashCharge",os:"Android 14 / OriginOS 4",network:"5G"},highlights:["144Hz ultra-smooth display","6000 mAh massive battery","Dimensity 9300+ chip","80W fast charging","Gaming-grade cooling"]},
+  // ---- OPPO ----
+  16:{colors:[{name:"Space Black",hex:"#1a1a2e"},{name:"Pearl White",hex:"#f0ede8"},{name:"Nebula Silver",hex:"#c0c8d0"}],storage:["256GB","512GB"],ram:["12GB","16GB"],specs:{display:'6.78" LTPO AMOLED 120Hz',processor:"Dimensity 9400",camera:"50MP Hasselblad + 50MP + 6MP Triple",battery:"5910 mAh",charging:"80W SUPERVOOC + 50W Wireless",os:"Android 15 / ColorOS 15",network:"5G"},highlights:["Hasselblad co-engineered cameras","80W SUPERVOOC fast charging","IP69 water resistance","Dimensity 9400 flagship chip","7 years OS & security updates"]},
+  17:{colors:[{name:"Graphite Grey",hex:"#4a4a4a"},{name:"Lush Green",hex:"#3a7a4a"},{name:"Luminous Blue",hex:"#3a5a9a"}],storage:["256GB","512GB"],ram:["12GB"],specs:{display:'6.83" AMOLED 120Hz',processor:"Dimensity 8350",camera:"50MP + 50MP + 8MP Triple",battery:"5800 mAh",charging:"80W SUPERVOOC",os:"Android 15 / ColorOS 15",network:"5G"},highlights:["80W SUPERVOOC fast charging","5800 mAh large battery","50MP dual main cameras","IP65 water resistance","AI-powered photography"]},
+  18:{colors:[{name:"Graphite Grey",hex:"#4a4a4a"},{name:"Lush Green",hex:"#3a7a4a"},{name:"Luminous Blue",hex:"#3a5a9a"}],storage:["128GB","256GB"],ram:["8GB","12GB"],specs:{display:'6.59" AMOLED 120Hz',processor:"Dimensity 8350",camera:"50MP + 8MP Dual",battery:"5600 mAh",charging:"67W SUPERVOOC",os:"Android 15 / ColorOS 15",network:"5G"},highlights:["67W SUPERVOOC charging","5600 mAh battery","Dimensity 8350 chip","120Hz AMOLED display","Slim & lightweight design"]},
+  19:{colors:[{name:"Starry Black",hex:"#1a1a2e"},{name:"Ocean Blue",hex:"#2a5a8a"},{name:"Sparkle Purple",hex:"#6a3a8a"}],storage:["128GB","256GB"],ram:["8GB"],specs:{display:'6.67" LCD 90Hz',processor:"Dimensity 6300",camera:"50MP + 2MP Dual",battery:"5100 mAh",charging:"45W SUPERVOOC",os:"Android 14 / ColorOS 14",network:"5G"},highlights:["45W fast charging","5100 mAh battery","50MP AI camera","Slim 7.68mm design","Splash resistant"]},
+  // ---- ONEPLUS ----
+  20:{colors:[{name:"Midnight Ocean",hex:"#1a2a4a"},{name:"Arctic Dawn",hex:"#e8f0f8"},{name:"Black Eclipse",hex:"#0a0a0a"}],storage:["256GB","512GB"],ram:["12GB","16GB"],specs:{display:'6.82" LTPO AMOLED 120Hz',processor:"Snapdragon 8 Elite",camera:"50MP Hasselblad + 50MP + 50MP Triple",battery:"6000 mAh",charging:"100W SUPERVOOC + 50W Wireless",os:"Android 15 / OxygenOS 15",network:"5G"},highlights:["Hasselblad Master Edition cameras","100W ultra-fast charging (35 min full)","6000 mAh massive battery","Snapdragon 8 Elite chip","IP69 water resistance"]},
+  21:{colors:[{name:"Astral Trail",hex:"#8a6a3a"},{name:"Nebula Noir",hex:"#1a1a2e"},{name:"Hazel Green",hex:"#3a5a3a"}],storage:["128GB","256GB"],ram:["8GB","12GB"],specs:{display:'6.78" AMOLED 120Hz',processor:"Snapdragon 7s Gen 3",camera:"50MP + 8MP + 2MP Triple",battery:"5500 mAh",charging:"80W SUPERVOOC",os:"Android 15 / OxygenOS 15",network:"5G"},highlights:["80W fast charging","5500 mAh battery","Snapdragon 7s Gen 3","Alert Slider","4 years OS updates"]},
+  22:{colors:[{name:"Mercurial Silver",hex:"#c0c0c0"},{name:"Obsidian Midnight",hex:"#1a1a1a"},{name:"Aqua Surge",hex:"#2a8a9a"}],storage:["128GB","256GB"],ram:["8GB","12GB"],specs:{display:'6.74" AMOLED 120Hz',processor:"Snapdragon 7s Gen 3",camera:"50MP + 8MP Dual",battery:"5000 mAh",charging:"100W SUPERVOOC",os:"Android 15 / OxygenOS 15",network:"5G"},highlights:["100W ultra-fast charging","Snapdragon 7s Gen 3","Alert Slider","4 years OS updates","Slim 7.8mm design"]},
+  23:{colors:[{name:"Dark Chrome",hex:"#3a3a3a"},{name:"Celadon Marble",hex:"#a0b8a8"},{name:"Lite Lavender",hex:"#b0a0c8"}],storage:["128GB","256GB"],ram:["8GB"],specs:{display:'6.67" AMOLED 120Hz',processor:"Snapdragon 7s Gen 2",camera:"50MP + 2MP Dual",battery:"5500 mAh",charging:"67W SUPERVOOC",os:"Android 14 / OxygenOS 14",network:"5G"},highlights:["67W fast charging","5500 mAh battery","Alert Slider","Snapdragon 7s Gen 2","3 years OS updates"]},
+  // ---- REALME ----
+  24:{colors:[{name:"Fluid Silver",hex:"#c0c8d0"},{name:"Razor Green",hex:"#2a6a3a"},{name:"Mars Orange",hex:"#d06030"}],storage:["256GB","512GB"],ram:["12GB","16GB"],specs:{display:'6.78" LTPO AMOLED 120Hz',processor:"Snapdragon 8 Elite",camera:"50MP Sony + 50MP + 50MP Triple",battery:"6500 mAh",charging:"120W SUPERVOOC",os:"Android 15 / Realme UI 6",network:"5G"},highlights:["120W ultra-fast charging (26 min full)","6500 mAh massive battery","Snapdragon 8 Elite chip","Sony LYT-818 main sensor","IP69 water resistance"]},
+  25:{colors:[{name:"Pearl White",hex:"#f0ede8"},{name:"Emerald Green",hex:"#2a6a4a"},{name:"Nebula Purple",hex:"#6a3a8a"}],storage:["128GB","256GB","512GB"],ram:["8GB","12GB"],specs:{display:'6.83" AMOLED 120Hz',processor:"Dimensity 7300 Energy",camera:"50MP + 8MP + 2MP Triple",battery:"6000 mAh",charging:"80W SUPERVOOC",os:"Android 15 / Realme UI 6",network:"5G"},highlights:["80W fast charging","6000 mAh battery","Periscope telephoto camera","IP64 splash resistance","AI-powered features"]},
+  26:{colors:[{name:"Pearl White",hex:"#f0ede8"},{name:"Emerald Green",hex:"#2a6a4a"},{name:"Nebula Purple",hex:"#6a3a8a"}],storage:["128GB","256GB"],ram:["8GB","12GB"],specs:{display:'6.77" AMOLED 120Hz',processor:"Dimensity 7300 Energy",camera:"50MP + 8MP Dual",battery:"5200 mAh",charging:"67W SUPERVOOC",os:"Android 15 / Realme UI 6",network:"5G"},highlights:["67W fast charging","5200 mAh battery","Dimensity 7300 Energy","120Hz AMOLED display","Slim 7.9mm design"]},
+  27:{colors:[{name:"Neon Green",hex:"#40c040"},{name:"Fusion Black",hex:"#1a1a1a"},{name:"Fusion Purple",hex:"#6a3a8a"}],storage:["128GB","256GB"],ram:["8GB"],specs:{display:'6.67" AMOLED 120Hz',processor:"Dimensity 7050",camera:"50MP + 8MP Dual",battery:"5000 mAh",charging:"67W SUPERVOOC",os:"Android 14 / Realme UI 5",network:"5G"},highlights:["67W fast charging","5000 mAh battery","Dimensity 7050 chip","120Hz AMOLED","Slim & lightweight"]},
+  // ---- REDMI ----
+  28:{colors:[{name:"Obsidian Black",hex:"#1a1a1a"},{name:"Aurora Purple",hex:"#6a3a8a"},{name:"Frost White",hex:"#f0f0f0"}],storage:["256GB","512GB"],ram:["8GB","12GB"],specs:{display:'6.67" AMOLED 120Hz',processor:"Dimensity 9200+",camera:"200MP + 8MP + 2MP Triple",battery:"5110 mAh",charging:"90W HyperCharge",os:"Android 14 / HyperOS 2",network:"5G"},highlights:["200MP ultra-high resolution camera","90W HyperCharge fast charging","Dimensity 9200+ flagship chip","IP68 water resistance","4 years OS updates"]},
+  29:{colors:[{name:"Obsidian Black",hex:"#1a1a1a"},{name:"Aurora Purple",hex:"#6a3a8a"},{name:"Frost White",hex:"#f0f0f0"}],storage:["128GB","256GB"],ram:["8GB","12GB"],specs:{display:'6.67" AMOLED 120Hz',processor:"Dimensity 7300 Ultra",camera:"200MP + 8MP + 2MP Triple",battery:"5110 mAh",charging:"45W Fast Charge",os:"Android 14 / HyperOS 2",network:"5G"},highlights:["200MP main camera","45W fast charging","Dimensity 7300 Ultra","IP68 water resistance","4 years OS updates"]},
+  30:{colors:[{name:"Midnight Black",hex:"#1a1a1a"},{name:"Titan Blue",hex:"#2a4a7a"},{name:"Glacier White",hex:"#f0f0f0"}],storage:["128GB","256GB"],ram:["6GB","8GB"],specs:{display:'6.67" AMOLED 120Hz',processor:"Dimensity 7025 Ultra",camera:"108MP + 8MP + 2MP Triple",battery:"5500 mAh",charging:"33W Fast Charge",os:"Android 14 / HyperOS 2",network:"5G"},highlights:["108MP main camera","5500 mAh large battery","33W fast charging","120Hz AMOLED display","Slim design"]},
+  31:{colors:[{name:"Midnight Black",hex:"#1a1a1a"},{name:"Starlight Blue",hex:"#3a5a8a"},{name:"Sage Green",hex:"#4a7a4a"}],storage:["128GB","256GB"],ram:["4GB","6GB","8GB"],specs:{display:'6.88" HD+ LCD 90Hz',processor:"Helio G91 Ultra",camera:"50MP + 2MP Dual",battery:"5160 mAh",charging:"18W Fast Charge",os:"Android 14 / HyperOS",network:"4G"},highlights:["50MP AI camera","5160 mAh battery","18W fast charging","Large 6.88\" display","Budget-friendly price"]},
+  // ---- POCO ----
+  32:{colors:[{name:"Titanium Black",hex:"#2a2a2a"},{name:"Titanium Blue",hex:"#2a4a7a"},{name:"Titanium White",hex:"#f0f0f0"}],storage:["256GB","512GB"],ram:["8GB","12GB"],specs:{display:'6.67" AMOLED 120Hz',processor:"Dimensity 8400 Ultra",camera:"50MP + 8MP + 2MP Triple",battery:"6000 mAh",charging:"90W HyperCharge",os:"Android 15 / HyperOS 2",network:"5G"},highlights:["90W ultra-fast charging","6000 mAh massive battery","Dimensity 8400 Ultra chip","120Hz AMOLED display","Gaming-grade cooling system"]},
+  33:{colors:[{name:"Titanium Black",hex:"#2a2a2a"},{name:"Titanium Blue",hex:"#2a4a7a"},{name:"Titanium Silver",hex:"#c0c0c0"}],storage:["128GB","256GB"],ram:["8GB","12GB"],specs:{display:'6.67" AMOLED 120Hz',processor:"Snapdragon 7s Gen 3",camera:"50MP + 8MP Dual",battery:"5500 mAh",charging:"45W Fast Charge",os:"Android 15 / HyperOS 2",network:"5G"},highlights:["Snapdragon 7s Gen 3","45W fast charging","5500 mAh battery","120Hz AMOLED","4 years OS updates"]},
+  34:{colors:[{name:"Titanium Black",hex:"#2a2a2a"},{name:"Titanium Blue",hex:"#2a4a7a"},{name:"Titanium Silver",hex:"#c0c0c0"}],storage:["128GB","256GB"],ram:["6GB","8GB"],specs:{display:'6.67" AMOLED 120Hz',processor:"Dimensity 7025 Ultra",camera:"50MP + 2MP Dual",battery:"5000 mAh",charging:"33W Fast Charge",os:"Android 14 / HyperOS",network:"5G"},highlights:["Dimensity 7025 Ultra","33W fast charging","5000 mAh battery","120Hz AMOLED","Budget flagship value"]},
+};
+
+// ===== OPEN PRODUCT DETAIL =====
+function openPD(id) {
+  const p = phones.find(x => x.id === id);
+  if (!p) return;
+  const s = specsDB[id];
+
+  document.getElementById('pdTitle').textContent = p.name;
+  document.getElementById('pdBrand').textContent = p.brand;
+  // Show image in popup header if available
+  const pdIconEl = document.getElementById('pdIcon');
+  const imgUrl = phoneImages[p.id];
+  if (imgUrl) {
+    pdIconEl.outerHTML = `<img id="pdIcon" src="${imgUrl}" alt="${p.name}"
+      style="width:52px;height:52px;object-fit:contain;border-radius:10px;background:#f4f6fb;padding:4px;"
+      onerror="this.outerHTML='<i id=\\'pdIcon\\' class=\\'ti ${brandIcon(p.brand)}\\' style=\\'font-size:28px;color:var(--gold);\\'></i>'">`;
+  } else {
+    pdIconEl.className = 'ti ' + brandIcon(p.brand);
+  }
+  document.getElementById('pdPrice').textContent = '₹' + p.price.toLocaleString('en-IN');
+  document.getElementById('pdOld').textContent = p.oldPrice ? '₹' + p.oldPrice.toLocaleString('en-IN') : '';
+  const disc = p.oldPrice ? Math.round((p.oldPrice - p.price) / p.oldPrice * 100) : 0;
+  document.getElementById('pdOff').textContent = disc > 0 ? disc + '% OFF' : 'Best Price';
+
+  if (s) {
+    // Colors
+    const colorsEl = document.getElementById('pdColors');
+    colorsEl.innerHTML = s.colors.map((c,i) =>
+      `<div class="pd-color${i===0?' active':''}" style="background:${c.hex};" title="${c.name}" onclick="selectColor(this,'${c.name}')"></div>`
+    ).join('');
+    document.getElementById('pdColorName').textContent = s.colors[0].name;
+
+    // Storage
+    const storageEl = document.getElementById('pdStorage');
+    storageEl.innerHTML = s.storage.map((v,i) =>
+      `<div class="pd-variant${i===0?' active':''}" onclick="selectVariant(this)">${v}</div>`
+    ).join('');
+
+    // RAM
+    const ramEl = document.getElementById('pdRam');
+    if (s.ram && s.ram.length > 0) {
+      ramEl.innerHTML = s.ram.map((v,i) =>
+        `<div class="pd-variant${i===0?' active':''}" onclick="selectVariant(this)">${v}</div>`
+      ).join('');
+      document.getElementById('pdRamSection').style.display = '';
+    } else {
+      document.getElementById('pdRamSection').style.display = 'none';
+    }
+
+    // Specs
+    const specIcons = {display:'ti-device-mobile',processor:'ti-cpu',camera:'ti-camera',battery:'ti-battery-charging',charging:'ti-plug',os:'ti-brand-android',network:'ti-wifi'};
+    const specLabels = {display:'Display',processor:'Processor',camera:'Camera',battery:'Battery',charging:'Charging',os:'OS',network:'Network'};
+    document.getElementById('pdSpecs').innerHTML = Object.entries(s.specs).map(([k,v]) =>
+      `<div class="pd-spec">
+        <div class="pd-spec-icon"><i class="ti ${specIcons[k]||'ti-info-circle'}"></i></div>
+        <div><div class="pd-spec-label">${specLabels[k]||k}</div><div class="pd-spec-value">${v}</div></div>
+      </div>`
+    ).join('');
+
+    // Highlights
+    document.getElementById('pdHighlights').innerHTML = s.highlights.map(h =>
+      `<div class="pd-highlight"><i class="ti ti-circle-check-filled"></i>${h}</div>`
+    ).join('');
+  }
+
+  // WhatsApp button
+  document.getElementById('pdWaBtn').onclick = () => {
+    const msg = encodeURIComponent(`Hi, I want to enquire about: ${p.name} (₹${p.price.toLocaleString('en-IN')})`);
+    window.open('https://wa.me/919600888888?text=' + msg, '_blank');
+  };
+
+  document.getElementById('pdOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePD(e) {
+  if (e && e.target !== document.getElementById('pdOverlay')) return;
+  document.getElementById('pdOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function selectColor(el, name) {
+  document.querySelectorAll('.pd-color').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('pdColorName').textContent = name;
+}
+
+function selectVariant(el) {
+  const parent = el.parentElement;
+  parent.querySelectorAll('.pd-variant').forEach(v => v.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// ===== MAP EMBED CHECK =====
+// If page is opened as local file (file://) the iframe will be blocked — show fallback
+(function(){
+  if(window.location.protocol === 'file:'){
+    document.getElementById('mapEmbed').style.display = 'none';
+    document.getElementById('mapFallback').style.display = 'flex';
+  }
+})();
+
+// ===== DATA — loaded from backend API =====
+let phones = [];
+let accessories = [];
+let nextId = 200;
+let cartItems = 0;
+let currentPhoneBrand = "all";
+let currentAccType = "all";
+let currentAccBrand = "all";
+let currentSubFilter = "all";
+
+// API base — empty string means same server (works on localhost AND when hosted)
+const API_BASE = '';
+
+// ===== LOAD DATA FROM API =====
+async function loadProducts() {
+  try {
+    // Show loading state
+    document.getElementById('phonesRow').innerHTML =
+      '<div style="padding:40px 20px;color:#aaa;font-size:14px;display:flex;align-items:center;gap:10px;"><i class="ti ti-loader" style="font-size:20px;animation:spin 1s linear infinite;"></i> Loading phones...</div>';
+    document.getElementById('accessoriesRow').innerHTML =
+      '<div style="padding:40px 20px;color:#aaa;font-size:14px;display:flex;align-items:center;gap:10px;"><i class="ti ti-loader" style="font-size:20px;animation:spin 1s linear infinite;"></i> Loading accessories...</div>';
+
+    // Fetch phones and accessories in parallel
+    const [phonesRes, accsRes] = await Promise.all([
+      fetch(API_BASE + '/api/phones'),
+      fetch(API_BASE + '/api/accessories')
+    ]);
+
+    if (!phonesRes.ok || !accsRes.ok) throw new Error('Server error');
+
+    phones      = await phonesRes.json();
+    accessories = await accsRes.json();
+
+    // Render both
+    renderPhones("all", "all");
+    renderAccessories("all", "all");
+
+  } catch (err) {
+    // Fallback: load from local JSON files (works with Live Server)
+    console.warn('API not available, loading from local JSON:', err.message);
+    try {
+      const [phonesRes, accsRes] = await Promise.all([
+        fetch('./products.json'),
+        fetch('./accessories.json')
+      ]);
+      phones      = await phonesRes.json();
+      accessories = await accsRes.json();
+      renderPhones("all", "all");
+      renderAccessories("all", "all");
+    } catch (e) {
+      document.getElementById('phonesRow').innerHTML =
+        '<div style="padding:40px;color:#dc2626;font-size:14px;">⚠️ Could not load products. Please start the server with: <code>node app.js</code></div>';
+    }
+  }
+}
+
+// Spin animation for loader
+const spinStyle = document.createElement('style');
+spinStyle.textContent = '@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}';
+document.head.appendChild(spinStyle);
+
+// ===== RENDER PHONES =====
+function renderPhones(brand, subFilter) {
+  brand     = brand     !== undefined ? brand     : currentPhoneBrand;
+  subFilter = subFilter !== undefined ? subFilter : currentSubFilter;
+  let filtered = phones;
+  if (brand !== "all")     filtered = filtered.filter(p => p.brand === brand);
+  if (subFilter !== "all") filtered = filtered.filter(p => p.badge === subFilter);
+  document.getElementById("phonesRow").innerHTML = filtered.map(p => phoneCard(p)).join("");
+}
+
+function phoneCard(p) {
+  const disc = p.oldPrice && p.oldPrice > p.price ? Math.round((p.oldPrice - p.price) / p.oldPrice * 100) : 0;
+  const save = p.oldPrice && p.oldPrice > p.price ? (p.oldPrice - p.price).toLocaleString("en-IN") : 0;
+  const stockClass = p.stock==="in"?"in":p.stock==="low"?"low":"out";
+  const stockText  = p.stock==="in"?"✓ In Stock":p.stock==="low"?"⚠ Low Stock":"✗ Out of Stock";
+  const hasSpecs   = !!specsDB[p.id];
+  const imgUrl = p.imageUrl || phoneImages[p.id] || "";
+  const localImg = p.image || "";
+  const imgHtml = (imgUrl || localImg)
+    ? `<img src="${imgUrl || localImg}" alt="${p.name}" loading="lazy"
+         onerror="this.src='${localImg}';this.onerror=function(){this.style.display='none';this.nextElementSibling.style.display='flex';}">`
+    : "";
+  return `<div class="pcard" onclick="openPD(${p.id})">
+    ${save>0?`<div class="psave-badge">Save ₹${save}</div>`:""}
+    <div class="pwish" onclick="event.stopPropagation();toggleWish(this)"><i class="ti ti-heart"></i></div>
+    <div class="pimg">
+      ${imgHtml}
+      <div class="pimg-fallback" style="display:${imgUrl?'none':'flex'};align-items:center;justify-content:center;width:100%;height:100%;">
+        <i class="ti ${brandIcon(p.brand)}" style="font-size:48px;color:#c0c8d8;"></i>
+      </div>
+    </div>
+    <div class="pcard-body">
+      <div class="pbrand">${p.brand}</div>
+      <div class="pname">${p.name}</div>
+      <div class="pprice">
+        <span class="sale">₹${p.price.toLocaleString("en-IN")}</span>
+        ${p.oldPrice && p.oldPrice > p.price ? `<div class="price-row2"><span class="original">₹${p.oldPrice.toLocaleString("en-IN")}</span>${disc>0?`<span class="off">${disc}% off</span>`:""}</div>` : ""}
+      </div>
+      <div class="pstock ${stockClass}">${stockText}</div>
+      ${hasSpecs?`<div style="font-size:10px;color:#3b82f6;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:3px;"><i class="ti ti-info-circle" style="font-size:11px;"></i> Tap for specs & colors</div>`:""}
+      <button class="enquire-btn" onclick="event.stopPropagation();enquire('${p.name}')">Enquire Now</button>
+    </div>
+  </div>`;
+}
+
+// ===== RENDER ACCESSORIES =====
+function renderAccessories(type, brand) {
+  let filtered = accessories;
+  if (type !== "all")  filtered = filtered.filter(a => a.accType === type);
+  if (brand !== "all") filtered = filtered.filter(a => a.brand === brand);
+  document.getElementById("accessoriesRow").innerHTML = filtered.map(a => accCard(a)).join("");
+}
+
+function accCard(a) {
+  const disc  = a.oldPrice && a.oldPrice > a.price ? Math.round((a.oldPrice - a.price) / a.oldPrice * 100) : 0;
+  const save  = a.oldPrice && a.oldPrice > a.price ? (a.oldPrice - a.price).toLocaleString("en-IN") : 0;
+  const imgUrl  = a.imageUrl || accImages[a.id] || "";
+  const localImg = a.image || "";
+  const imgHtml = (imgUrl || localImg)
+    ? `<img src="${imgUrl || localImg}" alt="${a.name}" loading="lazy"
+         onerror="this.src='${localImg}';this.onerror=function(){this.style.display='none';this.nextElementSibling.style.display='flex';}">`
+    : "";
+  return `<div class="pcard">
+    ${save>0?`<div class="psave-badge">Save ₹${save}</div>`:""}
+    <div class="pwish" onclick="toggleWish(this)"><i class="ti ti-heart"></i></div>
+    <div class="pimg">
+      ${imgHtml}
+      <div class="pimg-fallback" style="display:${imgUrl?'none':'flex'};align-items:center;justify-content:center;width:100%;height:100%;">
+        <i class="ti ${accIcon(a.accType)}" style="font-size:44px;color:#c0c8d8;"></i>
+      </div>
+    </div>
+    <div class="pcard-body">
+      <div class="pbrand">${a.brand}</div>
+      <div class="pname">${a.name}</div>
+      <div class="pprice">
+        <span class="sale">₹${a.price.toLocaleString("en-IN")}</span>
+        ${a.oldPrice && a.oldPrice > a.price ? `<div class="price-row2"><span class="original">₹${a.oldPrice.toLocaleString("en-IN")}</span>${disc>0?`<span class="off">${disc}% off</span>`:""}</div>` : ""}
+      </div>
+      <button class="enquire-btn" onclick="enquire('${a.name}')">Enquire Now</button>
+    </div>
+  </div>`;
+}
+
+function brandIcon(brand) {
+  const icons = {Apple:"ti-brand-apple",Samsung:"ti-brand-samsung",Vivo:"ti-device-mobile",Oppo:"ti-device-mobile",OnePlus:"ti-device-mobile",Realme:"ti-device-mobile",Redmi:"ti-device-mobile",Poco:"ti-device-mobile"};
+  return icons[brand] || "ti-device-mobile";
+}
+function accIcon(type) {
+  const icons = {Charger:"ti-plug",Earphones:"ti-headphones",Case:"ti-device-mobile",Cable:"ti-plug-connected","Screen Guard":"ti-shield","Power Bank":"ti-battery-charging"};
+  return icons[type] || "ti-device-mobile";
+}
+function badgeLabel(b) {
+  const labels = {hot:"🔥 Hot",new:"✨ New",offer:"🏷 Offer",trending:"📈 Trending"};
+  return labels[b] || b;
+}
+
+// ===== SCROLL ROW =====
+function scrollRow(id, dir) {
+  const el = document.getElementById(id);
+  if (el) el.scrollBy({ left: dir * 600, behavior: "smooth" });
+}
+
+// ===== FILTERS =====
+document.getElementById("brandStrip").addEventListener("click", e => {
+  const b = e.target.closest(".brand-logo");
+  if (!b) return;
+  document.querySelectorAll(".brand-logo").forEach(x => x.classList.remove("active"));
+  b.classList.add("active");
+  currentPhoneBrand = b.dataset.brand;
+  renderPhones(currentPhoneBrand, currentSubFilter);
+});
+
+document.getElementById("phoneSubTabs").addEventListener("click", e => {
+  const t = e.target.closest(".sub-tab");
+  if (!t) return;
+  document.querySelectorAll(".sub-tab").forEach(x => x.classList.remove("active"));
+  t.classList.add("active");
+  currentSubFilter = t.dataset.filter;
+  renderPhones(currentPhoneBrand, currentSubFilter);
+});
+
+document.getElementById("accTypeFilter").addEventListener("click", e => {
+  const tab = e.target.closest(".acc-tab");
+  if (!tab) return;
+  document.querySelectorAll(".acc-tab").forEach(t => t.classList.remove("active"));
+  tab.classList.add("active");
+  currentAccType = tab.dataset.type;
+  renderAccessories(currentAccType, currentAccBrand);
+});
+
+document.getElementById("accBrandFilter").addEventListener("click", e => {
+  const btn = e.target.closest(".acc-brand-btn");
+  if (!btn) return;
+  document.querySelectorAll(".acc-brand-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  currentAccBrand = btn.dataset.brand;
+  renderAccessories(currentAccType, currentAccBrand);
+});
+
+// ===== SEARCH =====
+function searchProducts() {
+  const q = document.getElementById("searchInput").value.toLowerCase().trim();
+  if (!q) { renderPhones(currentPhoneBrand, currentSubFilter); return; }
+  const results = phones.filter(p =>
+    p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q)
+  );
+  document.getElementById("phonesRow").innerHTML = results.length
+    ? results.map(p => phoneCard(p)).join("")
+    : `<div style="padding:40px;color:#aaa;font-size:14px;">No results for "${q}"</div>`;
+}
+
+// ===== WISHLIST =====
+function attachWishEvents() {}
+function toggleWish(el) {
+  el.classList.toggle("liked");
+  const i = el.querySelector("i");
+  if (el.classList.contains("liked")) {
+    i.className = "ti ti-heart-filled";
+    i.style.color = "#ef4444";
+    showToast("Added to wishlist ❤️");
+  } else {
+    i.className = "ti ti-heart";
+    i.style.color = "";
+    showToast("Removed from wishlist");
+  }
+}
+
+// ===== ENQUIRE =====
+function enquire(name) {
+  const msg = encodeURIComponent("Hi, I want to enquire about: " + name);
+  window.open("https://wa.me/919600888888?text=" + msg, "_blank");
+}
+
+// ===== ADMIN CREDENTIALS =====
+let ADMIN_ID  = "mahaveer";
+let ADMIN_PWD = "admin@123";
+// Recovery contacts (masked for display, real values for OTP simulation)
+const ADMIN_PHONE = "9600888888";
+const ADMIN_EMAIL = "mahaveermobiles@gmail.com";
+let adminLoggedIn = false;
+let currentOTP = "";
+let fpMethod = "";
+let resendInterval = null;
+
+// ===== ADMIN ICON HELPERS =====
+function setAdminIconLoggedIn(on) {
+  const btn = document.getElementById("navAdminBtn");
+  const ico = document.getElementById("navAdminIcon");
+  if (!btn || !ico) return;
+  if (on) {
+    ico.className = "ti ti-shield-check";
+    btn.classList.add("loggedin");
+  } else {
+    ico.className = "ti ti-settings";
+    btn.classList.remove("loggedin");
+  }
+}
+
+// ===== LOGIN FLOW =====
+function openLoginOrAdmin() {
+  if (adminLoggedIn) { openAdmin(); }
+  else { showLoginStep(); document.getElementById("loginOverlay").classList.add("open"); }
+}
+function closeLogin() {
+  document.getElementById("loginOverlay").classList.remove("open");
+  clearInterval(resendInterval);
+}
+function closeLoginOutside(e) {
+  if (e.target === document.getElementById("loginOverlay")) closeLogin();
+}
+function showLoginStep() {
+  document.getElementById("stepLogin").style.display = "";
+  document.getElementById("stepForgot1").style.display = "none";
+  document.getElementById("stepForgot2").style.display = "none";
+  document.getElementById("stepForgot3").style.display = "none";
+  document.getElementById("loginError").classList.remove("show");
+  document.getElementById("loginId").value = "";
+  document.getElementById("loginPwd").value = "";
+}
+function doLogin() {
+  const id  = document.getElementById("loginId").value.trim();
+  const pwd = document.getElementById("loginPwd").value;
+  if (!id || !pwd) {
+    document.getElementById("loginErrMsg").textContent = "❌ Please enter ID and Password";
+    document.getElementById("loginError").classList.add("show");
+    return;
+  }
+
+  // Try real API login first
+  fetch(API_BASE + '/api/admin/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ adminId: id, password: pwd })
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.token) {
+      localStorage.setItem('adminToken', data.token);
+      localStorage.setItem('adminId', id);
+      _loginSuccess();
+    } else {
+      _loginFail(data.error || 'Invalid credentials');
+    }
+  })
+  .catch(() => {
+    // Fallback to local credentials if server not running
+    if (id === ADMIN_ID && pwd === ADMIN_PWD) {
+      _loginSuccess();
+    } else {
+      _loginFail(id !== ADMIN_ID ? '❌ Invalid Admin ID' : '❌ Wrong Password');
+    }
+  });
+}
+
+function _loginSuccess() {
+  adminLoggedIn = true;
+  closeLogin();
+  document.getElementById("adminBar").classList.add("show");
+  setAdminIconLoggedIn(true);
+  openAdmin();
+  showToast("✅ Admin login successful!");
+}
+
+function _loginFail(msg) {
+  document.getElementById("loginErrMsg").textContent = msg;
+  document.getElementById("loginError").classList.add("show");
+  document.getElementById("loginPwd").value = "";
+  document.getElementById("loginPwd").focus();
+}
+function adminLogout() {
+  adminLoggedIn = false;
+  closeAdmin();
+  document.getElementById("adminBar").classList.remove("show");
+  setAdminIconLoggedIn(false);
+  showToast("👋 Logged out of admin");
+}
+function togglePwd(id, el) {
+  const inp = document.getElementById(id);
+  if (inp.type === "password") { inp.type = "text"; el.textContent = "🙈"; }
+  else { inp.type = "password"; el.textContent = "👁"; }
+}
+
+// ===== FORGOT PASSWORD FLOW =====
+// Uses EmailJS to send real OTP to admin email (no OTP shown on screen)
+// EmailJS public key & service must be configured below
+const EMAILJS_SERVICE  = "service_mahaveer";   // ← your EmailJS service ID
+const EMAILJS_TEMPLATE = "template_otp";        // ← your EmailJS template ID
+const EMAILJS_PUBKEY   = "YOUR_EMAILJS_PUBLIC_KEY"; // ← your EmailJS public key
+
+function showForgotStep1() {
+  document.getElementById("stepLogin").style.display    = "none";
+  document.getElementById("stepForgot1").style.display  = "";
+  document.getElementById("stepForgot2").style.display  = "none";
+  document.getElementById("stepForgot3").style.display  = "none";
+}
+
+function selectFPMethod(method) {
+  fpMethod = method;
+  // Generate OTP — stored only in memory, NEVER shown on screen
+  currentOTP = String(Math.floor(100000 + Math.random() * 900000));
+
+  const dest = method === "phone"
+    ? "+91 " + ADMIN_PHONE.slice(0,5) + "XXXXX"   // masked
+    : ADMIN_EMAIL.replace(/(.{3})(.*)(@.*)/, "$1***$3"); // masked
+
+  // Show sending state
+  document.getElementById("stepForgot1").style.display = "none";
+  document.getElementById("stepForgot2").style.display = "";
+  document.getElementById("otpSentMsg").textContent = "Sending OTP…";
+  document.getElementById("otpError").classList.remove("show");
+  document.querySelectorAll(".otp-box").forEach(b => { b.value = ""; b.classList.remove("filled"); });
+
+  if (method === "email") {
+    // Send via EmailJS
+    if (typeof emailjs === "undefined") {
+      document.getElementById("otpSentMsg").textContent =
+        "⚠️ Email service not configured. Contact your developer.";
+      return;
+    }
+    emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, {
+      to_email : ADMIN_EMAIL,
+      otp_code : currentOTP,
+      store_name: "Mahaveer Mobiles"
+    }, EMAILJS_PUBKEY)
+    .then(() => {
+      document.getElementById("otpSentMsg").textContent =
+        "✅ OTP sent to " + dest;
+      document.querySelectorAll(".otp-box")[0].focus();
+      startResendTimer();
+    })
+    .catch(() => {
+      document.getElementById("otpSentMsg").textContent =
+        "❌ Failed to send OTP. Check EmailJS config.";
+    });
+
+  } else {
+    // Phone OTP — requires a backend/SMS API (Fast2SMS, Twilio etc.)
+    // This cannot be done from a plain HTML file without a server.
+    // Show a clear message to the admin.
+    document.getElementById("otpSentMsg").innerHTML =
+      `<span style="color:#d97706;">⚠️ SMS OTP requires server setup.<br>
+      Please use <b>Email OTP</b> instead, or ask your developer to connect Fast2SMS / Twilio API.</span>`;
+    currentOTP = ""; // clear — no OTP active
+  }
+}
+
+function otpNext(el, idx) {
+  el.value = el.value.replace(/[^0-9]/g, "");
+  if (el.value) {
+    el.classList.add("filled");
+    const boxes = document.querySelectorAll(".otp-box");
+    if (idx < 5) boxes[idx + 1].focus();
+  } else {
+    el.classList.remove("filled");
+  }
+}
+
+function verifyOTP() {
+  if (!currentOTP) {
+    showOTPError("No active OTP. Please go back and try again.");
+    return;
+  }
+  const boxes   = document.querySelectorAll(".otp-box");
+  const entered = Array.from(boxes).map(b => b.value).join("");
+  if (entered.length < 6) { showOTPError("Please enter all 6 digits"); return; }
+
+  if (entered === currentOTP) {
+    currentOTP = ""; // clear immediately after use
+    clearInterval(resendInterval);
+    document.getElementById("stepForgot2").style.display = "none";
+    document.getElementById("stepForgot3").style.display = "";
+    document.getElementById("resetError").classList.remove("show");
+    document.getElementById("newAdminId").value  = "";
+    document.getElementById("newPwd").value      = "";
+    document.getElementById("confirmPwd").value  = "";
+  } else {
+    showOTPError("❌ Wrong OTP. Please try again.");
+    boxes.forEach(b => { b.value = ""; b.classList.remove("filled"); });
+    boxes[0].focus();
+  }
+}
+
+function showOTPError(msg) {
+  document.getElementById("otpErrMsg").textContent = msg;
+  document.getElementById("otpError").classList.add("show");
+}
+
+function resendOTP() {
+  if (fpMethod === "phone") return; // SMS not supported without backend
+  currentOTP = String(Math.floor(100000 + Math.random() * 900000));
+  document.getElementById("otpError").classList.remove("show");
+  document.querySelectorAll(".otp-box").forEach(b => { b.value = ""; b.classList.remove("filled"); });
+  document.getElementById("otpSentMsg").textContent = "Resending OTP…";
+
+  if (typeof emailjs !== "undefined") {
+    emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, {
+      to_email  : ADMIN_EMAIL,
+      otp_code  : currentOTP,
+      store_name: "Mahaveer Mobiles"
+    }, EMAILJS_PUBKEY)
+    .then(() => {
+      const dest = ADMIN_EMAIL.replace(/(.{3})(.*)(@.*)/, "$1***$3");
+      document.getElementById("otpSentMsg").textContent = "✅ New OTP sent to " + dest;
+      document.querySelectorAll(".otp-box")[0].focus();
+      startResendTimer();
+    })
+    .catch(() => {
+      document.getElementById("otpSentMsg").textContent = "❌ Failed to resend. Try again.";
+    });
+  }
+}
+
+function startResendTimer() {
+  clearInterval(resendInterval);
+  let secs = 30;
+  document.getElementById("resendBtn").style.display   = "none";
+  document.getElementById("resendTimer").style.display = "";
+  document.getElementById("timerCount").textContent    = secs;
+  resendInterval = setInterval(() => {
+    secs--;
+    document.getElementById("timerCount").textContent = secs;
+    if (secs <= 0) {
+      clearInterval(resendInterval);
+      document.getElementById("resendBtn").style.display   = "";
+      document.getElementById("resendTimer").style.display = "none";
+    }
+  }, 1000);
+}
+
+function resetCredentials() {
+  const newId   = document.getElementById("newAdminId").value.trim();
+  const newPwd  = document.getElementById("newPwd").value;
+  const confPwd = document.getElementById("confirmPwd").value;
+  const errEl   = document.getElementById("resetError");
+  const show = (msg) => { document.getElementById("resetErrMsg").textContent = msg; errEl.classList.add("show"); };
+  if (!newId)             { show("❌ Admin ID cannot be empty"); return; }
+  if (newId.length < 4)   { show("❌ Admin ID must be at least 4 characters"); return; }
+  if (!newPwd)            { show("❌ Password cannot be empty"); return; }
+  if (newPwd.length < 6)  { show("❌ Password must be at least 6 characters"); return; }
+  if (newPwd !== confPwd) { show("❌ Passwords do not match"); return; }
+  ADMIN_ID  = newId;
+  ADMIN_PWD = newPwd;
+  closeLogin();
+  showToast("✅ New credentials saved! Please login again.");
+  setTimeout(() => {
+    showLoginStep();
+    document.getElementById("loginOverlay").classList.add("open");
+  }, 1800);
+}
+
+// ===== ADMIN PANEL =====
+function openAdmin() {
+  if (!adminLoggedIn) { openLoginOrAdmin(); return; }
+  document.getElementById("adminOverlay").classList.add("open");
+  renderAdminList();
+}
+function closeAdmin() {
+  document.getElementById("adminOverlay").classList.remove("open");
+}
+document.getElementById("adminOverlay").addEventListener("click", e => {
+  if (e.target === document.getElementById("adminOverlay")) closeAdmin();
+});
+function switchAdminTab(tab) {
+  document.querySelectorAll(".admin-tab").forEach((t,i) => {
+    const tabs = ["add","manage","acc"];
+    t.classList.toggle("active", tabs[i] === tab);
+  });
+  document.querySelectorAll(".admin-panel").forEach(p => p.classList.remove("active"));
+  document.getElementById("panel-" + tab).classList.add("active");
+  if (tab === "manage") renderAdminList();
+}
+function addPhone() {
+  const brand = document.getElementById("addBrand").value;
+  const name = document.getElementById("addName").value.trim();
+  const price = parseInt(document.getElementById("addPrice").value);
+  const oldPrice = parseInt(document.getElementById("addOldPrice").value) || price;
+  const badge = document.getElementById("addBadge").value;
+  const stock = document.getElementById("addStock").value;
+  const rating = parseFloat(document.getElementById("addRating").value) || 4.5;
+  if (!name || !price) { showToast("Please fill all required fields"); return; }
+  phones.unshift({id:nextId++,brand,name,price,oldPrice,badge,stock,rating,reviews:0,type:"phone"});
+  renderPhones(currentPhoneBrand);
+  showToast("Phone added successfully! ✅");
+  document.getElementById("addName").value = "";
+  document.getElementById("addPrice").value = "";
+  document.getElementById("addOldPrice").value = "";
+}
+function addAccessory() {
+  const brand = document.getElementById("accAddBrand").value;
+  const name = document.getElementById("accAddName").value.trim();
+  const type = document.getElementById("accAddType").value;
+  const price = parseInt(document.getElementById("accAddPrice").value);
+  const oldPrice = parseInt(document.getElementById("accAddOldPrice").value) || price;
+  if (!name || !price) { showToast("Please fill all required fields"); return; }
+  accessories.unshift({id:nextId++,brand,name,type,price,oldPrice,badge:"new",stock:"in",rating:4.5,reviews:0,accType:type});
+  renderAccessories(currentAccType, currentAccBrand);
+  showToast("Accessory added successfully! ✅");
+  document.getElementById("accAddName").value = "";
+  document.getElementById("accAddPrice").value = "";
+  document.getElementById("accAddOldPrice").value = "";
+}
+function renderAdminList() {
+  const list = document.getElementById("adminProductList");
+  list.innerHTML = phones.map(p => {
+    const disc = p.oldPrice && p.oldPrice > p.price ? Math.round((p.oldPrice - p.price) / p.oldPrice * 100) : 0;
+    return `
+    <div class="product-item" id="item-${p.id}">
+      <div class="product-item-icon"><i class="ti ${brandIcon(p.brand)}" style="font-size:22px;color:#1a1a2e;"></i></div>
+      <div class="product-item-info">
+        <div class="name">${p.name}</div>
+        <div class="brand" style="color:#888;font-size:11px;">${p.brand} ${disc>0?`· <span style="color:#16a34a;font-weight:700;">${disc}% off</span>`:""}</div>
+      </div>
+      <div class="product-item-price">
+        <div style="font-size:15px;font-weight:800;color:#dc2626;">₹${p.price.toLocaleString("en-IN")}</div>
+        ${p.oldPrice && p.oldPrice > p.price ? `<div style="font-size:11px;color:#aaa;text-decoration:line-through;">₹${p.oldPrice.toLocaleString("en-IN")}</div>` : ""}
+      </div>
+      <div class="product-item-actions">
+        <button class="edit-btn" onclick="toggleEditForm(${p.id})" title="Edit Price"><i class="ti ti-edit"></i></button>
+        <button class="del-btn" onclick="deletePhone(${p.id})" title="Delete"><i class="ti ti-trash"></i></button>
+      </div>
+    </div>
+    <div class="edit-form" id="ef-${p.id}">
+      <div style="font-size:12px;font-weight:700;color:var(--dark2);margin-bottom:4px;">✏️ Update Price — ${p.name}</div>
+      <div class="ef-row">
+        <div>
+          <label>Sale Price (₹)</label>
+          <input type="number" id="ef-price-${p.id}" value="${p.price}" placeholder="e.g. 79999"/>
+        </div>
+        <div>
+          <label>Original MRP (₹)</label>
+          <input type="number" id="ef-old-${p.id}" value="${p.oldPrice||p.price}" placeholder="e.g. 84999"/>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:4px;">
+        <button class="ef-save" onclick="savePhonePrice(${p.id})">💾 Save Price</button>
+        <button class="ef-cancel" onclick="toggleEditForm(${p.id})">Cancel</button>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function toggleEditForm(id) {
+  const ef = document.getElementById("ef-" + id);
+  const isOpen = ef.classList.contains("open");
+  // Close all open forms first
+  document.querySelectorAll(".edit-form.open").forEach(f => f.classList.remove("open"));
+  if (!isOpen) ef.classList.add("open");
+}
+
+function savePhonePrice(id) {
+  const p = phones.find(x => x.id === id);
+  if (!p) return;
+  const newPrice = parseInt(document.getElementById("ef-price-" + id).value);
+  const newOld   = parseInt(document.getElementById("ef-old-"   + id).value);
+  if (!newPrice || newPrice <= 0)  { showToast("❌ Enter a valid sale price"); return; }
+  if (!newOld   || newOld   <= 0)  { showToast("❌ Enter a valid original price"); return; }
+  if (newPrice > newOld)           { showToast("❌ Sale price cannot be more than original price"); return; }
+
+  const token = localStorage.getItem('adminToken');
+  if (token) {
+    // Save to MongoDB via API
+    fetch(API_BASE + '/api/phones/' + id, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+      body: JSON.stringify({ price: newPrice, oldPrice: newOld })
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) { showToast('❌ ' + data.error); return; }
+      p.price = newPrice; p.oldPrice = newOld;
+      renderPhones(currentPhoneBrand, currentSubFilter);
+      renderAdminList();
+      showToast('✅ Price updated for ' + p.name);
+    })
+    .catch(() => {
+      // Offline fallback — update in memory only
+      p.price = newPrice; p.oldPrice = newOld;
+      renderPhones(currentPhoneBrand, currentSubFilter);
+      renderAdminList();
+      showToast('✅ Price updated (offline mode)');
+    });
+  } else {
+    // No token — update in memory only
+    p.price = newPrice; p.oldPrice = newOld;
+    renderPhones(currentPhoneBrand, currentSubFilter);
+    renderAdminList();
+    showToast('✅ Price updated for ' + p.name);
+  }
+}
+
+function deletePhone(id) {
+  const p = phones.find(x => x.id === id);
+  if (!p) return;
+  if (!confirm(`Delete "${p.name}"? This cannot be undone.`)) return;
+  phones = phones.filter(x => x.id !== id);
+  renderPhones(currentPhoneBrand);
+  renderAdminList();
+  showToast("🗑️ Product deleted");
+}
+
+// ===== TOAST =====
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  document.getElementById("toastMsg").textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 3000);
+}
+
+// Close popup on Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.getElementById('pdOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+    closeAdmin();
+  }
+});
+
+// ===== INIT =====
+loadProducts();
+
+</script>
+</body>
+</html>
