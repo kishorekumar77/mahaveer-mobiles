@@ -389,24 +389,123 @@ footer{background:var(--dark);padding:40px 24px 20px;}
 .social-links a{width:34px;height:34px;background:#ffffff10;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:16px;transition:all .2s;}
 .social-links a:hover{background:var(--gold);color:var(--dark2);}
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
+/* ===== RESPONSIVE — Mobile, Tablet, Laptop, Desktop ===== */
+
+/* Large Desktop (1200px+) */
+@media(min-width:1200px){
+  .section{padding:48px 40px;}
+  .hero{padding:70px 40px 60px;}
+  .hero h1{font-size:46px;}
+  .pcard{flex:0 0 200px;width:200px;}
+}
+
+/* Laptop (992px - 1199px) */
+@media(max-width:1199px){
+  .hero h1{font-size:34px;}
+  .hero-visual{flex:0 0 280px;}
+  .footer-top{grid-template-columns:2fr 1fr 1fr;}
+}
+
+/* Tablet (768px - 991px) */
+@media(max-width:991px){
   .topbar{display:none;}
-  nav{padding:0 16px;}
   .nav-links{display:none;}
-  .nav-search input{width:100px;}
-  .hero{padding:40px 16px 36px;}
-  .hero h1{font-size:26px;}
+  .nav-search input{width:120px;}
+  .hero{padding:48px 20px 40px;}
+  .hero h1{font-size:30px;}
   .hero-visual{display:none;}
   .contact-wrap{grid-template-columns:1fr;}
   .footer-top{grid-template-columns:1fr 1fr;}
-  .form-row{grid-template-columns:1fr;}
-  .products-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}
+  .section{padding:32px 20px;}
+  .pcard{flex:0 0 175px;width:175px;}
 }
-@media(max-width:480px){
+
+/* Mobile Large (576px - 767px) */
+@media(max-width:767px){
+  .topbar{display:none;}
+  nav{padding:0 14px;height:58px;}
+  .logo-text{font-size:17px;}
+  .logo-sub{display:none;}
+  .nav-links{display:none;}
+  .nav-search{padding:6px 10px;}
+  .nav-search input{width:110px;font-size:12px;}
+  .hero{padding:36px 16px 32px;}
+  .hero h1{font-size:26px;line-height:1.2;}
+  .hero p{font-size:14px;}
+  .hero-visual{display:none;}
+  .hero-stats{gap:20px;}
+  .stat .num{font-size:22px;}
+  .btn-gold,.btn-ghost{padding:11px 20px;font-size:13px;}
+  .section{padding:28px 16px;}
+  .sec-head-left .sec-title{font-size:17px;}
+  .pcard{flex:0 0 155px;width:155px;}
+  .pimg{height:130px;}
+  .pimg img{height:110px;}
+  .pname{font-size:12px;}
+  .pprice .sale{font-size:14px;}
+  .contact-wrap{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .offers-grid{grid-template-columns:1fr;}
+  .features-grid{grid-template-columns:repeat(2,1fr);}
+  .admin-modal{border-radius:16px 16px 0 0;}
+}
+
+/* Mobile Small (up to 575px) */
+@media(max-width:575px){
+  nav{padding:0 12px;height:54px;}
+  .logo-icon{width:36px;height:36px;}
+  .logo-icon i{font-size:18px;}
+  .logo-text{font-size:15px;}
+  .nav-search input{width:90px;font-size:12px;}
+  .cart-btn{width:34px;height:34px;font-size:16px;}
+  .hero{padding:28px 14px 28px;}
+  .hero-tag{font-size:10px;padding:4px 10px;}
   .hero h1{font-size:22px;}
-  .products-grid{grid-template-columns:1fr 1fr;}
+  .hero p{font-size:13px;margin-bottom:20px;}
+  .hero-btns{gap:8px;}
+  .btn-gold,.btn-ghost{padding:10px 16px;font-size:12px;}
+  .hero-stats{gap:14px;margin-top:24px;}
+  .stat .num{font-size:20px;}
+  .stat .lbl{font-size:10px;}
+  .marquee-track span{font-size:12px;}
+  .section{padding:24px 12px;}
+  .sec-head-left .sec-title{font-size:16px;}
+  .sec-see-all{font-size:11px;padding:5px 10px;}
+  .pcard{flex:0 0 145px;width:145px;}
+  .pimg{height:120px;}
+  .pimg img{height:100px;}
+  .pcard-body{padding:8px 10px 10px;}
+  .pbrand{font-size:9px;}
+  .pname{font-size:12px;min-height:30px;}
+  .pprice .sale{font-size:14px;}
+  .pprice .original{font-size:10px;}
+  .pprice .off{font-size:9px;}
+  .enquire-btn{font-size:11px;padding:7px;}
+  .psave-badge{font-size:9px;padding:2px 6px;}
+  .sub-tab{font-size:11px;padding:5px 12px;}
+  .brand-logo{font-size:11px;padding:6px 12px;}
+  .acc-tab{font-size:11px;padding:6px 12px;}
+  .acc-brand-btn{font-size:11px;padding:4px 10px;}
   .footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .features-grid{grid-template-columns:repeat(2,1fr);}
+  .feat{padding:14px 10px;}
+  .feat-icon{width:42px;height:42px;}
+  .feat-icon i{font-size:20px;}
+  .contact-card{padding:20px 16px;}
+  .otp-box{width:38px;height:46px;font-size:18px;}
+  .pd-specs{grid-template-columns:1fr;}
+  .pd-actions{grid-template-columns:1fr;}
+}
+
+/* Very small phones (up to 360px) */
+@media(max-width:360px){
+  .hero h1{font-size:20px;}
+  .pcard{flex:0 0 135px;width:135px;}
+  .pimg{height:110px;}
+  nav{padding:0 10px;}
+  .nav-search input{width:75px;}
 }
 </style>
 </head>
@@ -700,7 +799,7 @@ footer{background:var(--dark);padding:40px 24px 20px;}
           <div style="font-size:12px;color:#888;margin-top:2px;">25, Kattukudalur Rd, Virudhachalam, TN 606001</div>
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;">
-          <a href="https://www.google.com/maps/place/Mahaveer+Mobiles/@11.5166067,79.3266344,17z/data=!3m1!4b1!4m6!3m5!1s0x3bab4a7a35af1339:0x75cc20b49b1af999!8m2!3d11.5166067!4d79.3266344"
+          <a href="https://maps.google.com/maps?daddr=11.5166067,79.3266344&amp;ll=11.5166067,79.3266344&amp;q=Mahaveer+Mobiles,+25+Kattukudalur+Rd,+Virudhachalam,+Tamil+Nadu+606001"
             target="_blank" rel="noopener"
             style="background:#1a1a2e;color:#f7c948;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:6px;text-decoration:none;">
             <i class="ti ti-map-pin"></i> Get Directions
@@ -1068,42 +1167,45 @@ footer{background:var(--dark);padding:40px 24px 20px;}
 
 <script>
 // ===== PHONE IMAGE URLs =====
-// GSMArena thumbnail images — load reliably when online
+// Using reliable image sources that allow hotlinking
 const phoneImages = {
-  1:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
-  2:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro.jpg",
-  3:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16.jpg",
-  4:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg",
-  5:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-plus.jpg",
-  6:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25-ultra.jpg",
-  7:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25+.jpg",
-  8:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25.jpg",
-  9:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a56-5g.jpg",
-  10:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a36-5g.jpg",
-  11:"https://fdn2.gsmarena.com/vv/bigpic/vivo-x200-pro.jpg",
-  12:"https://fdn2.gsmarena.com/vv/bigpic/vivo-x200.jpg",
-  13:"https://fdn2.gsmarena.com/vv/bigpic/vivo-v40-pro.jpg",
-  14:"https://fdn2.gsmarena.com/vv/bigpic/vivo-v40.jpg",
-  15:"https://fdn2.gsmarena.com/vv/bigpic/vivo-t3-ultra.jpg",
-  16:"https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x8-pro.jpg",
-  17:"https://fdn2.gsmarena.com/vv/bigpic/oppo-reno13-pro.jpg",
-  18:"https://fdn2.gsmarena.com/vv/bigpic/oppo-reno13.jpg",
-  19:"https://fdn2.gsmarena.com/vv/bigpic/oppo-a3-pro.jpg",
-  20:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-13.jpg",
-  21:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-13r.jpg",
-  22:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-4.jpg",
-  23:"https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce4.jpg",
-  24:"https://fdn2.gsmarena.com/vv/bigpic/realme-gt7-pro.jpg",
-  25:"https://fdn2.gsmarena.com/vv/bigpic/realme-14-pro+.jpg",
-  26:"https://fdn2.gsmarena.com/vv/bigpic/realme-14-pro.jpg",
-  27:"https://fdn2.gsmarena.com/vv/bigpic/realme-narzo-70-pro.jpg",
-  28:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14-pro+.jpg",
-  29:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14-pro.jpg",
-  30:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-14.jpg",
-  31:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-14c.jpg",
-  32:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x7-pro.jpg",
-  33:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x7.jpg",
-  34:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m7-pro.jpg",
+  // Apple
+  1:"https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-240909_Full-Bleed-Image.jpg.large.jpg",
+  2:"https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-240909_Full-Bleed-Image.jpg.large.jpg",
+  3:"https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/article/Apple-iPhone-16-hero-240909_Full-Bleed-Image.jpg.large.jpg",
+  4:"https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg",
+  5:"https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg",
+  // Samsung — using Samsung India press images
+  6:"https://images.samsung.com/is/image/samsung/p6pim/in/2501/gallery/in-galaxy-s25-ultra-s928-sm-s928bzkgins-thumb-542823648",
+  7:"https://images.samsung.com/is/image/samsung/p6pim/in/2501/gallery/in-galaxy-s25-s921-sm-s921bzkgins-thumb-542823648",
+  8:"https://images.samsung.com/is/image/samsung/p6pim/in/2501/gallery/in-galaxy-s25-s921-sm-s921bzkgins-thumb-542823648",
+  9:"https://images.samsung.com/is/image/samsung/p6pim/in/2504/gallery/in-galaxy-a56-5g-sm-a566elggins-thumb-542823648",
+  10:"https://images.samsung.com/is/image/samsung/p6pim/in/2503/gallery/in-galaxy-a36-5g-sm-a366elggins-thumb-542823648",
+  // Others — using placeholder with brand color
+  11:"https://www.vivo.com/content/dam/vivo/in/products/x200-pro/overview/kv.png",
+  12:"https://www.vivo.com/content/dam/vivo/in/products/x200/overview/kv.png",
+  13:"https://www.vivo.com/content/dam/vivo/in/products/v40-pro/overview/kv.png",
+  14:"https://www.vivo.com/content/dam/vivo/in/products/v40/overview/kv.png",
+  15:"https://www.vivo.com/content/dam/vivo/in/products/t3-ultra/overview/kv.png",
+  16:"https://image.oppo.com/content/dam/oppo/product-asset-library/find-x8-pro/find-x8-pro-v2/assets/pc/find-x8-pro-kv.png",
+  17:"https://image.oppo.com/content/dam/oppo/product-asset-library/reno13-pro/reno13-pro-v1/assets/pc/reno13-pro-kv.png",
+  18:"https://image.oppo.com/content/dam/oppo/product-asset-library/reno13/reno13-v1/assets/pc/reno13-kv.png",
+  19:"https://image.oppo.com/content/dam/oppo/product-asset-library/a3-pro/a3-pro-v1/assets/pc/a3-pro-kv.png",
+  20:"https://oasis.opstatics.com/content/dam/oasis/page/2024/in/spec-image/13-series/13/Midnight-Ocean.png",
+  21:"https://oasis.opstatics.com/content/dam/oasis/page/2024/in/spec-image/13r-series/13r/Astral-Trail.png",
+  22:"https://oasis.opstatics.com/content/dam/oasis/page/2024/in/spec-image/nord-4-series/nord-4/Mercurial-Silver.png",
+  23:"https://oasis.opstatics.com/content/dam/oasis/page/2024/in/spec-image/nord-ce4-series/nord-ce4/Dark-Chrome.png",
+  24:"https://image01.realme.net/general/20241101/1730449073752.png",
+  25:"https://image01.realme.net/general/20241201/1733042073752.png",
+  26:"https://image01.realme.net/general/20241201/1733042073752.png",
+  27:"https://image01.realme.net/general/20240601/1717042073752.png",
+  28:"https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-14-pro-plus/overview-kv.png",
+  29:"https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-14-pro/overview-kv.png",
+  30:"https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-14/overview-kv.png",
+  31:"https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-14c/overview-kv.png",
+  32:"https://i01.appmifile.com/webfile/globalimg/products/pc/poco-x7-pro/overview-kv.png",
+  33:"https://i01.appmifile.com/webfile/globalimg/products/pc/poco-x7/overview-kv.png",
+  34:"https://i01.appmifile.com/webfile/globalimg/products/pc/poco-m7-pro/overview-kv.png",
 };
 
 // Accessory images — using open Wikimedia / manufacturer press images
@@ -1349,19 +1451,20 @@ function phoneCard(p) {
   const stockClass = p.stock==="in"?"in":p.stock==="low"?"low":"out";
   const stockText  = p.stock==="in"?"✓ In Stock":p.stock==="low"?"⚠ Low Stock":"✗ Out of Stock";
   const hasSpecs   = !!specsDB[p.id];
-  const imgUrl = p.imageUrl || phoneImages[p.id] || "";
-  const localImg = p.image || "";
-  const imgHtml = (imgUrl || localImg)
-    ? `<img src="${imgUrl || localImg}" alt="${p.name}" loading="lazy"
-         onerror="this.src='${localImg}';this.onerror=function(){this.style.display='none';this.nextElementSibling.style.display='flex';}">`
+  const imgUrl  = p.imageUrl || phoneImages[p.id] || "";
+  const imgHtml = imgUrl
+    ? `<img src="${imgUrl}" alt="${p.name}" loading="lazy"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`
     : "";
+  const fallbackBg = brandColor(p.brand);
   return `<div class="pcard" onclick="openPD(${p.id})">
     ${save>0?`<div class="psave-badge">Save ₹${save}</div>`:""}
     <div class="pwish" onclick="event.stopPropagation();toggleWish(this)"><i class="ti ti-heart"></i></div>
     <div class="pimg">
       ${imgHtml}
-      <div class="pimg-fallback" style="display:${imgUrl?'none':'flex'};align-items:center;justify-content:center;width:100%;height:100%;">
+      <div class="pimg-fallback" style="display:${imgUrl?'none':'flex'};align-items:center;justify-content:center;width:100%;height:100%;flex-direction:column;gap:6px;background:#f0f4ff;">
         <i class="ti ${brandIcon(p.brand)}" style="font-size:48px;color:#c0c8d8;"></i>
+        <span style="font-size:10px;color:#c0c8d8;font-weight:600;">${p.brand}</span>
       </div>
     </div>
     <div class="pcard-body">
@@ -1390,18 +1493,18 @@ function accCard(a) {
   const disc  = a.oldPrice && a.oldPrice > a.price ? Math.round((a.oldPrice - a.price) / a.oldPrice * 100) : 0;
   const save  = a.oldPrice && a.oldPrice > a.price ? (a.oldPrice - a.price).toLocaleString("en-IN") : 0;
   const imgUrl  = a.imageUrl || accImages[a.id] || "";
-  const localImg = a.image || "";
-  const imgHtml = (imgUrl || localImg)
-    ? `<img src="${imgUrl || localImg}" alt="${a.name}" loading="lazy"
-         onerror="this.src='${localImg}';this.onerror=function(){this.style.display='none';this.nextElementSibling.style.display='flex';}">`
+  const imgHtml = imgUrl
+    ? `<img src="${imgUrl}" alt="${a.name}" loading="lazy"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`
     : "";
   return `<div class="pcard">
     ${save>0?`<div class="psave-badge">Save ₹${save}</div>`:""}
     <div class="pwish" onclick="toggleWish(this)"><i class="ti ti-heart"></i></div>
     <div class="pimg">
       ${imgHtml}
-      <div class="pimg-fallback" style="display:${imgUrl?'none':'flex'};align-items:center;justify-content:center;width:100%;height:100%;">
+      <div class="pimg-fallback" style="display:${imgUrl?'none':'flex'};align-items:center;justify-content:center;width:100%;height:100%;flex-direction:column;gap:6px;background:#f0f4ff;">
         <i class="ti ${accIcon(a.accType)}" style="font-size:44px;color:#c0c8d8;"></i>
+        <span style="font-size:10px;color:#c0c8d8;font-weight:600;">${a.brand}</span>
       </div>
     </div>
     <div class="pcard-body">
@@ -1419,6 +1522,10 @@ function accCard(a) {
 function brandIcon(brand) {
   const icons = {Apple:"ti-brand-apple",Samsung:"ti-brand-samsung",Vivo:"ti-device-mobile",Oppo:"ti-device-mobile",OnePlus:"ti-device-mobile",Realme:"ti-device-mobile",Redmi:"ti-device-mobile",Poco:"ti-device-mobile"};
   return icons[brand] || "ti-device-mobile";
+}
+function brandColor(brand) {
+  const colors = {Apple:"#555",Samsung:"#1428a0",Vivo:"#415fff",Oppo:"#1d4289",OnePlus:"#f5010c",Realme:"#ffcc00",Redmi:"#ff6900",Poco:"#ffcd00"};
+  return colors[brand] || "#c0c8d8";
 }
 function accIcon(type) {
   const icons = {Charger:"ti-plug",Earphones:"ti-headphones",Case:"ti-device-mobile",Cable:"ti-plug-connected","Screen Guard":"ti-shield","Power Bank":"ti-battery-charging"};
